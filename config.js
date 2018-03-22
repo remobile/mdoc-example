@@ -1,22 +1,21 @@
 const RemarkablePlugins = require('./lib/RemarkablePlugins');
 
 const config = {
-    title: '四面通物流大超市',
-    tagline: '这是一个非常奇妙的网站',
     projectName: 'simiantong',
-    headerIcon: 'img/docusaurus.svg',
-    favicon: 'img/favicon.png',
+    title: '四面通物流大超市',
+    favicon: 'img/favicon.ico',
+    logo: 'img/logo.png',
     colors: {
         primaryColor: 'rgb(34, 34, 34)',
         secondaryColor: '#05A5D1',
-        tintColor: '#005068',
-        backgroundColor: '#f5fcff',
         activeColor: '#FF4040',
+        tintColor: '#005068',
     },
     highlight: {
         theme: 'solarized-dark',
     },
     markdownPlugins: RemarkablePlugins,
+    documentPath: 'root', //默认为doc
     styles: [],
     scripts: [
         'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
@@ -24,6 +23,7 @@ const config = {
         `js/flowchart.js`,
         `js/echarts.js`,
     ],
+    footer: 'lib/Footer.js', //设置footer
     homePage: {
         name: '四面通',
         path: 'index.js',
