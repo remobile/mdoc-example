@@ -1,4 +1,4 @@
-const RemarkablePlugins = require('./lib/RemarkablePlugins');
+const markdownPlugins = require('./lib/markdownPlugins');
 
 const config = {
     projectName: 'simiantong',
@@ -14,7 +14,7 @@ const config = {
     highlight: {
         theme: 'solarized-dark',
     },
-    markdownPlugins: RemarkablePlugins,
+    markdownPlugins,
     documentPath: 'root', //默认为doc
     styles: [],
     scripts: [
@@ -48,6 +48,10 @@ const config = {
                         {
                             name: '公司风采2',
                             path: 'gongsi/fengcai2.md',
+                        },
+                        {
+                            name: '接口',
+                            path: 'api.md',
                         },
                         {
                             name: '图片',
