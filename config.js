@@ -49,6 +49,10 @@ const config = {
                             path: 'gongsi/fengcai2.md',
                         },
                         {
+                            name: 'container',
+                            path: 'gongsi/container.md',
+                        },
+                        {
                             name: '数学公式',
                             path: 'gongsi/katex.md',
                             supports: ['math'],
