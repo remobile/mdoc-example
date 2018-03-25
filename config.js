@@ -18,7 +18,6 @@ const config = {
     documentPath: 'root', //默认为doc
     styles: [],
     scripts: [
-        'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
         `js/raphael.js`,
         `js/flowchart.js`,
         `js/echarts.js`,
@@ -48,6 +47,11 @@ const config = {
                         {
                             name: '公司风采2',
                             path: 'gongsi/fengcai2.md',
+                        },
+                        {
+                            name: '数学公式',
+                            path: 'gongsi/katex.md',
+                            supports: ['math'],
                         },
                         {
                             name: '接口',
