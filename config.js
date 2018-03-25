@@ -35,26 +35,26 @@ const config = {
         },
         {
             name: '四面通',
-            mainPage: 'gongsi/fengcai1.md',
+            mainPage: 'md/container.md',
             groups: [
                 {
                     name: '公司风采',
                     pages: [
                         {
-                            name: '公司风采1',
-                            path: 'gongsi/fengcai1.md',
+                            name: 'emoji',
+                            path: 'md/emoji.md',
                         },
                         {
                             name: '公司风采2',
-                            path: 'gongsi/fengcai2.md',
+                            path: 'md/fengcai2.md',
                         },
                         {
                             name: 'container',
-                            path: 'gongsi/container.md',
+                            path: 'md/container.md',
                         },
                         {
                             name: '数学公式',
-                            path: 'gongsi/katex.md',
+                            path: 'md/katex.md',
                             supports: ['math'],
                         },
                         {
