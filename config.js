@@ -45,8 +45,12 @@ const config = {
                             path: 'md/emoji.md',
                         },
                         {
-                            name: '公司风采2',
-                            path: 'md/fengcai2.md',
+                            name: 'tabbreak',
+                            path: 'md/tabbreak.md',
+                        },
+                        {
+                            name: 'footnote',
+                            path: 'md/footnote.md',
                         },
                         {
                             name: 'container',

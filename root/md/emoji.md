@@ -5,3 +5,6 @@
 :grinning: :100:
 
 :P, :-P
+
+- [ ] fang
+- [x] fang1
