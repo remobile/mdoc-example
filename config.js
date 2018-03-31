@@ -17,9 +17,7 @@ const config = {
     markdownPlugins,
     documentPath: 'root', //默认为doc
     styles: [],
-    scripts: [
-        `js/echarts.js`,
-    ],
+    scripts: [],
     footer: 'lib/Footer.js', //设置footer
     homePage: {
         name: '四面通',
@@ -39,13 +37,18 @@ const config = {
                     name: '公司风采',
                     pages: [
                         {
+                            name: 'chart',
+                            path: 'md/chart.md',
+                            supports: ['chart'],
+                        },
+                        {
                             name: 'flow',
                             path: 'md/flow.md',
                             supports: ['flow'],
                         },
                         {
-                            name: 'fengcai2',
-                            path: 'md/fengcai2.md',
+                            name: 'button',
+                            path: 'md/button.md',
                         },
                         {
                             name: 'emoji',
