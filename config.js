@@ -41,6 +41,14 @@ const config = {
                     name: '公司风采',
                     pages: [
                         {
+                            name: 'flow',
+                            path: 'md/flow.md',
+                        },
+                        {
+                            name: 'fengcai2',
+                            path: 'md/fengcai2.md',
+                        },
+                        {
                             name: 'emoji',
                             path: 'md/emoji.md',
                         },

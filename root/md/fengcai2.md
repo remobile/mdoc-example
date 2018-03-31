@@ -15,19 +15,7 @@
 
 <a href="javascript:void(0);" class="button-android" onclick="displayTab('android')">Android</a>
 
-
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
-
 <div id="diagram">Diagram will be placed here</div>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
 
 <script>
   var diagram = flowchart.parse('st=>start: Start:>http://www.google.com[blank]\n' +
@@ -46,6 +34,7 @@ MathJax.Hub.Config({
                                 'c2(true)->io->e\n' +
                                 'c2(false)->op2->e'  //allow for true and false in conditionals
                                 );
+                                console.log(diagram);
   diagram.drawSVG('diagram');
 </script>
 
