@@ -18,8 +18,6 @@ const config = {
     documentPath: 'root', //默认为doc
     styles: [],
     scripts: [
-        `js/raphael.js`,
-        `js/flowchart.js`,
         `js/echarts.js`,
     ],
     footer: 'lib/Footer.js', //设置footer
@@ -43,6 +41,7 @@ const config = {
                         {
                             name: 'flow',
                             path: 'md/flow.md',
+                            supports: ['flow'],
                         },
                         {
                             name: 'fengcai2',
