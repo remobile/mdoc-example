@@ -37,6 +37,11 @@ const config = {
                     name: '公司风采',
                     pages: [
                         {
+                            name: 'sequence',
+                            path: 'md/sequence.md',
+                            supports: ['sequence'],
+                        },
+                        {
                             name: 'chart',
                             path: 'md/chart.md',
                             supports: ['chart'],
