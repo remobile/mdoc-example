@@ -30,12 +30,29 @@ const config = {
             mainPage: 'help.js',
         },
         {
-            name: '四面通',
+            name: '示例',
             mainPage: 'md/container.md',
             groups: [
                 {
-                    name: '公司风采',
+                    name: '常用',
                     pages: [
+                        {
+                            name: '图片',
+                            path: 'common/img.md',
+                        },
+                        {
+                            name: 'button',
+                            path: 'common/button.md',
+                        },
+                    ]
+                },
+                {
+                    name: '插件',
+                    pages: [
+                        {
+                            name: 'variable',
+                            path: 'md/variable.md',
+                        },
                         {
                             name: 'sequence',
                             path: 'md/sequence.md',
@@ -50,10 +67,6 @@ const config = {
                             name: 'flow',
                             path: 'md/flow.md',
                             supports: ['flow'],
-                        },
-                        {
-                            name: 'button',
-                            path: 'md/button.md',
                         },
                         {
                             name: 'emoji',
@@ -76,13 +89,24 @@ const config = {
                             path: 'md/katex.md',
                             supports: ['math'],
                         },
+                    ]
+                },
+            ],
+        },
+        {
+            name: '四面通',
+            mainPage: 'smt/tuxiang.png',
+            groups: [
+                {
+                    name: '公司风采',
+                    pages: [
                         {
-                            name: '接口',
-                            path: 'api.md',
+                            name: '公司面貌',
+                            path: 'smt/tuxiang.png',
                         },
                         {
-                            name: '图片',
-                            path: 'tuxiang.png',
+                            name: 'api文档',
+                            path: 'smt/api.md',
                         },
                     ]
                 },
@@ -91,15 +115,15 @@ const config = {
                     pages: [
                         {
                             name: '最新招聘',
-                            path: 'zhaopin.md',
+                            path: 'smt/zhaopin.md',
                         },
                         {
                             name: '用户须知',
-                            path: 'user.html',
+                            path: 'smt/user.html',
                         },
                         {
                             name: '说明',
-                            path: 'test.pdf',
+                            path: 'smt/test.pdf',
                         },
                     ]
                 },
@@ -120,7 +144,7 @@ const config = {
                 },
                 {
                     name: 'auto_number',
-                    path: 'auto_number.html',
+                    path: 'api/auto_number.html',
                     supports: ['toc'],
                 },
             ],
