@@ -1,4 +1,4 @@
-Here is a footnote reference,[^1] and another.[^longnote]
+Here is a footnote reference[^1], and another[^longnote].
 
 [^1]: Here is the footnote.
 

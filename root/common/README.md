@@ -3,7 +3,7 @@ README
 该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为`GitHub Flavored Markdown`。简称`GFM`，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。
 
 ****
-	
+
 |Author|果冻虾仁|
 |---|---
 |E-mail|Jelly.K.Wang@qq.com
@@ -25,7 +25,7 @@ README
 * [图片](#图片)
     * 来源于网络的图片
     * GitHub仓库中的图片
-* [链接](#链接) 
+* [链接](#链接)
     * 文字超链接
         *  链接外部URL
         *  链接本仓库里的URL
@@ -37,7 +37,7 @@ README
     * 复选框列表
 * [块引用](#块引用)
 * [代码高亮](#代码高亮)
-* [表格](#表格) 
+* [表格](#表格)
 * [表情](#表情)
 * [diff语法](#diff语法)
 
@@ -89,7 +89,7 @@ ___
 文字高亮功能能使行内部分文字高亮，使用一对反引号。
 语法：
 ```
-`linux` `网络编程` `socket` `epoll` 
+`linux` `网络编程` `socket` `epoll`
 ```
 效果：`linux` `网络编程` `socket` `epoll`
 
@@ -174,7 +174,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 |#|语法|效果|
 |---|----|:---:|
 |1|`[![weibo-logo]](http://weibo.com/linpiaochen)`|[![weibo-logo]](http://weibo.com/linpiaochen)|
-|2|`[![](/img/zhihu.png "我的知乎，欢迎关注")][zhihu]`|[![](/img/zhihu.png "我的知乎，欢迎关注")][zhihu]|
+|2|`[![](/simiantong/img/zhihu.png "我的知乎，欢迎关注")][zhihu]`|[![](/simiantong/img/zhihu.png "我的知乎，欢迎关注")][zhihu]|
 |3|`[![csdn-logo]][csdn]`|[![csdn-logo]][csdn]|
 
 因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。  
@@ -182,7 +182,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 > 本文URL标识符都放置于文末
 
 ### 锚点
-其实呢，每一个标题都是一个锚点，和HTML的锚点（`#`）类似，比如我们 
+其实呢，每一个标题都是一个锚点，和HTML的锚点（`#`）类似，比如我们
 
 |语法|效果|
 |---|---|
@@ -218,7 +218,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 1. 这是一级的有序列表，数字1还是1
    1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
       1. 这是三级的有序列表，数字在显示的时候变成了英文字母
-	 
+
 
 ### 复选框列表
 - [x] 需求分析
@@ -336,6 +336,6 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 [zhihu]:https://www.zhihu.com/people/jellywong "我的知乎，欢迎关注"
 [weibo]:http://weibo.com/linpiaochen
 [baidu-logo]:http://www.baidu.com/img/bdlogo.gif "百度logo"
-[weibo-logo]:/img/weibo.png "点击图片进入我的微博"
-[csdn-logo]:/img/csdn.png "我的CSDN博客"
+[weibo-logo]:/simiantong/img/weibo.png "点击图片进入我的微博"
+[csdn-logo]:/simiantong/img/csdn.png "我的CSDN博客"
 [foryou]:https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif

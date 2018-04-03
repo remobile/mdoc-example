@@ -37,6 +37,10 @@ const config = {
                     name: '常用',
                     pages: [
                         {
+                            name: 'README',
+                            path: 'common/README.md',
+                        },
+                        {
                             name: '图片',
                             path: 'common/img.md',
                         },
