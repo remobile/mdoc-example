@@ -139,17 +139,12 @@ const config = {
                 {
                     name: 'pdshop',
                     path: 'api/pdshop.md',
-                    supports: ['toc'],
+                    supports: ['tree'],
                 },
                 {
                     name: 'pdclient',
                     path: 'api/pdclient.md',
-                    supports: ['toc'],
-                },
-                {
-                    name: 'auto_number',
-                    path: 'api/auto_number.html',
-                    supports: ['toc'],
+                    supports: ['tree'],
                 },
             ],
         },
