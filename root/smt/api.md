@@ -1,4 +1,4 @@
-[TOC] number
+[TOC] number=-2
 
 ---
 
