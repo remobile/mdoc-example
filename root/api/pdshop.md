@@ -1,4 +1,4 @@
-[TOC] number tree 400
+[TOC] number tree=400  disable=1
 
 # pdshop接口文档
 

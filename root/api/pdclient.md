@@ -1,4 +1,4 @@
-[TOC] number tree 400
+[TOC] number tree=400 disable=1
 
 # pdclient接口文档
 
