@@ -54,6 +54,10 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: 'attrs',
+                            path: 'md/attrs.md',
+                        },
+                        {
                             name: 'variable',
                             path: 'md/variable.md',
                         },
