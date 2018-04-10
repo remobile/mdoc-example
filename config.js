@@ -37,6 +37,10 @@ const config = {
                     name: '常用',
                     pages: [
                         {
+                            name: '简历',
+                            path: 'common/resume.md',
+                        },
+                        {
                             name: 'README',
                             path: 'common/README.md',
                         },
