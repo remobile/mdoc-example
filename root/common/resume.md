@@ -8,8 +8,6 @@ dd { padding-left: 20px; margin: 10px; line-height: 1.8em; }
 hr { border:0.5px dotted gray !important; }
 </style>
 
-<div class='resumeContainer'>
-
 ::: resume 基本资料
 
 - **姓名：** 方运江
@@ -85,5 +83,3 @@ hr { border:0.5px dotted gray !important; }
 4.在业余时间，接触到了cocos2dx，对于跨平台的东西我非常感兴趣，因为个人喜欢用更少的代码做更多的事情。于是使用cocos2dx编写过一款游戏《天天拼图》和一款视频工作《魔拍相机》，都已经在上架了。
 5.个人很喜欢开源，开源让我学习了很多东西，我也会对开源做出贡献，在github中上传个自己编写的一些工具。个人非常喜欢git作为备份和版本控制。大到我的工程，小到我的日常生活中的记录，我都会使用git来管理。
 :::
-
-</div>
