@@ -40,7 +40,7 @@ const config = {
                             name: '简历',
                             path: 'common/resume.md',
                             container: {
-                                dom: 'div',
+                                dom: 'div', // default: div
                                 props: { className: 'resumeContainer' },
                             }
                         },
