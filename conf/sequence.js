@@ -1,6 +1,6 @@
 module.exports = {
     name: 'sequence',
     path: 'md/sequence.md',
-    supports: ['sequence'],
+    supports: ['jquery', '_', 'sequence'],
     dist: '1.html',
 };
