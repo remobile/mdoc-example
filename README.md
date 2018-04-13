@@ -1,6 +1,6 @@
 ### start
 
-```
+```sh
 git clone https://github.com/remobile/mdoc-example
 
 cd mdoc-example
