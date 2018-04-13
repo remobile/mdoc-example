@@ -1,0 +1,528 @@
+<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>README</title><meta name="viewport" content="width=device-width"/><link rel="shortcut icon" href="img/favicon.ico"/><link rel="stylesheet" href="/simiantong/solarized-dark.css"/><link rel="stylesheet" href="/simiantong/css/main.css"/><script type="text/javascript" src="/simiantong/js/jquery-1.4.4.min.js"></script><script type="text/javascript" src="/simiantong/js/underscore-min.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/simiantong/"><img class="logo" src="/simiantong/img/logo.png"/><span class="headerTitle">四面通物流大超市</span></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/simiantong/help_js.html" target="_self">帮助</a></li><li><a href="/simiantong/md_container_md.html" target="_self" style="color:#FF4040;">示例</a></li><li><a href="/simiantong/smt_tuxiang_png.html" target="_self">四面通</a></li><li><div><a id="modc_menu_api_pdshop_md" style="cursor:hand;">API</a><table id="modc_list_api_pdshop_md" style="display:none;margin-top:10px;border:0;"><tbody><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/simiantong/api_pdshop_md.html" target="_self">pdshop</a></td></tr><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/simiantong/api_pdclient_md.html" target="_self">pdclient</a></td></tr></tbody></table><script>
+                        $('#modc_menu_api_pdshop_md').click(function(){
+                            $('#modc_menu_api_pdshop_md').next().fadeToggle();
+                        });
+                        </script></div></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>README</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>常用</h3><ul><li class="navListItem"><a class="navItem" href="/simiantong/common_resume_md.html">简历</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/simiantong/common_README_md.html">README</a></li><li class="navListItem"><a class="navItem" href="/simiantong/common_img_md.html">图片</a></li><li class="navListItem"><a class="navItem" href="/simiantong/common_button_md.html">button</a></li></ul></div><div class="navGroup navGroupActive"><h3>插件</h3><ul><li class="navListItem"><a class="navItem" href="/simiantong/md_attrs_md.html">attrs</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_variable_md.html">variable</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_sequence_md.html">sequence</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_chart_md.html">chart</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_flow_md.html">flow</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_emoji_md.html">emoji</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_tabbreak_md.html">tabbreak</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_footnote_md.html">footnote</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_container_md.html">container</a></li><li class="navListItem"><a class="navItem" href="/simiantong/md_katex_md.html">数学公式</a></li></ul></div></div></section></div><script>
+                        $('#navToggler').click(function(){
+                            $('#docsNav').toggleClass('docsSliderActive');
+                        });
+                        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><article><div><span><h1>README</h1>
+<p>该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为<code>GitHub Flavored Markdown</code>。简称<code>GFM</code>，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Author</th>
+<th>果冻虾仁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-mail</td>
+<td><a href="mailto:Jelly.K.Wang@qq.com">Jelly.K.Wang@qq.com</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>目录</h2>
+<ul>
+<li><a href="#%E6%A8%AA%E7%BA%BF">横线</a></li>
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC">文本</a>
+<ul>
+<li>普通文本</li>
+<li>单行文本</li>
+<li>多行文本</li>
+<li>文字高亮</li>
+<li>换行</li>
+<li>斜体</li>
+<li>粗体</li>
+<li>删除线</li>
+</ul>
+</li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a>
+<ul>
+<li>来源于网络的图片</li>
+<li>GitHub仓库中的图片</li>
+</ul>
+</li>
+<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
+<ul>
+<li>文字超链接
+<ul>
+<li>链接外部URL</li>
+<li>链接本仓库里的URL</li>
+</ul>
+</li>
+<li>锚点</li>
+<li><a href="#%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5">图片链接</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
+<ul>
+<li>无序列表</li>
+<li>有序列表</li>
+<li>复选框列表</li>
+</ul>
+</li>
+<li><a href="#%E5%9D%97%E5%BC%95%E7%94%A8">块引用</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE">代码高亮</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#%E8%A1%A8%E6%83%85">表情</a></li>
+<li><a href="#diff%E8%AF%AD%E6%B3%95">diff语法</a></li>
+</ul>
+<h3>横线</h3>
+<hr>
+<p>***、---、___可以显示横线效果</p>
+<hr>
+<hr>
+<hr>
+<h2>标题</h2>
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h4>四级标题</h4>
+<h5>五级标题</h5>
+<h6>六级标题</h6>
+<h2>文本</h2>
+<h3>普通文本</h3>
+<p>这是一段普通的文本</p>
+<h3>单行文本</h3>
+<p>&ensp;&ensp;&ensp;&ensp;Hello,大家好，我是果冻虾仁。<br>
+在一行开头加入1个Tab或者4个空格。</p>
+<h3>文本块</h3>
+<h4>语法1</h4>
+<p>在连续几行的文本开头加入1个Tab或者4个空格。</p>
+<p>&ensp;&ensp;&ensp;&ensp;欢迎到访<br>
+&ensp;&ensp;&ensp;&ensp;很高兴见到您<br>
+&ensp;&ensp;&ensp;&ensp;祝您，早上好，中午好，下午好，晚安</p>
+<h4>语法2</h4>
+<p>使用一对各三个的反引号：</p>
+<pre><code class="hljs"><span class="hljs-comment">欢迎到访</span>
+<span class="hljs-comment">我是C</span><span class="hljs-literal">+</span><span class="hljs-literal">+</span><span class="hljs-comment">码农</span>
+<span class="hljs-comment">你可以在知乎、CSDN、简书搜索【果冻虾仁】找到我</span>
+</code></pre>
+<p>该语法也可以实现代码高亮，见<a href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE">代码高亮</a></p>
+<h3>文字高亮</h3>
+<p>文字高亮功能能使行内部分文字高亮，使用一对反引号。<br>
+语法：</p>
+<pre><code class="hljs">`linux` `网络编程` `socket` `epoll`
+</code></pre>
+<p>效果：<code>linux</code>&ensp;<code>网络编程</code>&ensp;<code>socket</code>&ensp;<code>epoll</code></p>
+<p>也适合做一篇文章的tag</p>
+<h4>换行</h4>
+<p>直接回车不能换行，<br>
+可以在上一行文本后面补两个空格，<br>
+这样下一行的文本就换行了。</p>
+<p>或者就是在两行文本直接加一个空行。</p>
+<p>也能实现换行效果，不过这个行间距有点大。</p>
+<h4>斜体、粗体、删除线</h4>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*斜体1*</code></td>
+<td><em>斜体1</em></td>
+</tr>
+<tr>
+<td><code>_斜体2_</code></td>
+<td><em>斜体2</em></td>
+</tr>
+<tr>
+<td><code>**粗体1**</code></td>
+<td><strong>粗体1</strong></td>
+</tr>
+<tr>
+<td><code>__粗体2__</code></td>
+<td><strong>粗体2</strong></td>
+</tr>
+<tr>
+<td><code>这是一个 ~~删除线~~</code></td>
+<td>这是一个&ensp;<s>删除线</s></td>
+</tr>
+<tr>
+<td><code>***斜粗体1***</code></td>
+<td><em><strong>斜粗体1</strong></em></td>
+</tr>
+<tr>
+<td><code>___斜粗体2___</code></td>
+<td><em><strong>斜粗体2</strong></em></td>
+</tr>
+<tr>
+<td><code>***~~斜粗体删除线1~~***</code></td>
+<td><em><strong><s>斜粗体删除线1</s></strong></em></td>
+</tr>
+<tr>
+<td><code>~~***斜粗体删除线2***~~</code></td>
+<td><s><em><strong>斜粗体删除线2</strong></em></s></td>
+</tr>
+</tbody>
+</table>
+<p>&ensp;&ensp;&ensp;&ensp;斜体、粗体、删除线可混合使用</p>
+<h2>图片</h2>
+<p>基本格式：</p>
+<pre><code class="hljs">![<span class="hljs-string">alt</span>](<span class="hljs-link">URL title</span>)
+</code></pre>
+<p>alt和title即对应HTML中的alt和title属性（都可省略）：</p>
+<ul>
+<li>alt表示图片显示失败时的替换文本</li>
+<li>title表示鼠标悬停在图片时的显示文本（注意这里要加引号）</li>
+</ul>
+<p>URL即图片的url地址，如果引用本仓库中的图片，直接使用<strong>相对路径</strong>就可了，如果引用其他github仓库中的图片要注意格式，即：<code>仓库地址/raw/分支名/图片路径</code>，如：</p>
+<pre><code class="hljs">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/guodongxiaren/</span>ImageCache<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/Logo/</span>foryou.gif
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>![baidu](http://www.baidu.com/img/bdlogo.gif &quot;百度logo&quot;)</code></td>
+<td><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu" title="百度logo"></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>![][foryou]</code></td>
+<td><img src="https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>注意例2的写法使用了<strong>URL标识符</strong>的形式，在<a href="#%E9%93%BE%E6%8E%A5">链接</a>一节有介绍。</p>
+<blockquote>
+<p>在文末有foryou的定义：</p>
+</blockquote>
+<pre><code class="hljs">[foryou]:https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/guodongxiaren/</span>ImageCache<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/Logo/</span>foryou.gif
+</code></pre>
+<h2>链接</h2>
+<h3>链接外部URL</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>[我的博客](http://blog.csdn.net/guodongxiaren &quot;悬停显示&quot;)</code></td>
+<td><a href="http://blog.csdn.net/guodongxiaren" title="悬停显示">我的博客</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>[我的知乎][zhihu]</code></td>
+<td><a href="https://www.zhihu.com/people/jellywong" title="我的知乎，欢迎关注">我的知乎</a></td>
+</tr>
+</tbody>
+</table>
+<p>语法2由两部分组成：</p>
+<ul>
+<li>第一部分使用两个中括号，[&ensp;]里的标识符（本例中zhihu），可以是数字，字母等的组合，标识符上下对应就行了（<strong>姑且称之为URL标识符</strong>）</li>
+<li>第二部分标记实际URL。</li>
+</ul>
+<blockquote>
+<p>使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。</p>
+<blockquote>
+<p>URL标识符是我起的名字，不知道是否准确。囧。。</p>
+</blockquote>
+</blockquote>
+<h3>链接本仓库里的URL</h3>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[我的简介](/example/profile.md)</code></td>
+<td><a href="/example/profile.md">我的简介</a></td>
+</tr>
+<tr>
+<td><code>[Book](./Book)</code></td>
+<td><a href="/Book">Book</a></td>
+</tr>
+</tbody>
+</table>
+<h3>图片链接</h3>
+<p>给图片加链接的本质是混合图片显示语法和普通的链接语法。普通的链接中[&ensp;]内部是链接要显示的文本，而图片链接[&ensp;]里面则是要显示的图片。<br>
+直接混合两种语法当然可以，但是十分啰嗦，为此我们可以使用URL标识符的形式。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>语法</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>[![weibo-logo]](http://weibo.com/linpiaochen)</code></td>
+<td style="text-align:center"><a href="http://weibo.com/linpiaochen"><img src="/simiantong/img/weibo.png" alt="weibo-logo" title="点击图片进入我的微博"></a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>[![](/simiantong/img/zhihu.png &quot;我的知乎，欢迎关注&quot;)][zhihu]</code></td>
+<td style="text-align:center"><a href="https://www.zhihu.com/people/jellywong" title="我的知乎，欢迎关注"><img src="/simiantong/img/zhihu.png" alt="" title="我的知乎，欢迎关注"></a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>[![csdn-logo]][csdn]</code></td>
+<td style="text-align:center"><a href="http://blog.csdn.net/guodongxiaren" title="我的博客"><img src="/simiantong/img/csdn.png" alt="csdn-logo" title="我的CSDN博客"></a></td>
+</tr>
+</tbody>
+</table>
+<p>因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。<br>
+注意，此时鼠标悬停时显示的文字是图片的title，而非链接本身的title了。</p>
+<blockquote>
+<p>本文URL标识符都放置于文末</p>
+</blockquote>
+<h3>锚点</h3>
+<p>其实呢，每一个标题都是一个锚点，和HTML的锚点（<code>#</code>）类似，比如我们</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[回到顶部](#readme)</code></td>
+<td><a href="#readme">回到顶部</a></td>
+</tr>
+</tbody>
+</table>
+<p>不过要注意，标题中的英文字母都被转化为<strong>小写字母</strong>了。</p>
+<blockquote>
+<p>以前GitHub对中文支持的不好，所以中文标题不能正确识别为锚点，但是现在已经没问题啦！</p>
+</blockquote>
+<h2>列表</h2>
+<h3>无序列表</h3>
+<ul>
+<li>昵称：果冻虾仁</li>
+</ul>
+<ul>
+<li>别名：隔壁老王</li>
+</ul>
+<ul>
+<li>英文名：Jelly</li>
+</ul>
+<h3>多级无序列表</h3>
+<ul>
+<li>编程语言
+<ul>
+<li>脚本语言
+<ul>
+<li>Python</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>有序列表</h3>
+<h4>一般效果</h4>
+<p>就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。<br>
+面向对象的三个基本特征：</p>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ol>
+<h4>多级有序列表</h4>
+<p>和无序列表一样，有序列表也有多级结构：&ensp;&ensp;</p>
+<ol>
+<li>这是一级的有序列表，数字1还是1
+<ol>
+<li>这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
+<ol>
+<li>这是三级的有序列表，数字在显示的时候变成了英文字母</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>复选框列表</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox">&ensp;需求分析</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox">&ensp;系统设计</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox">&ensp;详细设计</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox">&ensp;编码</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox">&ensp;测试</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox">&ensp;交付</li>
+</ul>
+<p>您可以使用这个功能来标注某个项目各项任务的完成情况。</p>
+<blockquote>
+<p>Tip:</p>
+<blockquote>
+<p>在GitHub的<strong>issue</strong>中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。</p>
+</blockquote>
+</blockquote>
+<h2>块引用</h2>
+<h3>常用于引用文本</h3>
+<h4>文本摘自《深入理解计算机系统》P27</h4>
+<p>　令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little&ensp;endian”（小端）和“big&ensp;endian”（大端）出自Jonathan&ensp;Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。</p>
+<blockquote>
+<p><strong>“端”（endian）的起源</strong><br>
+以下是Jonathan&ensp;Swift在1726年关于大小端之争历史的描述：<br>
+“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”</p>
+</blockquote>
+<h3>块引用有多级结构</h3>
+<blockquote>
+<p>数据结构</p>
+<blockquote>
+<p>树</p>
+<blockquote>
+<p>二叉树</p>
+<blockquote>
+<p>平衡二叉树</p>
+<blockquote>
+<p>满二叉树</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>代码高亮</h2>
+<p>在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。</p>
+<pre><code class="hljs css Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[]args)</span></span>{} <span class="hljs-comment">//Java</span>
+</code></pre>
+<pre><code class="hljs css c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span> <span class="hljs-comment">//C</span>
+</span></code></pre>
+<pre><code class="hljs css Bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">"hello GitHub"</span> <span class="hljs-comment">#Bash</span>
+</code></pre>
+<pre><code class="hljs css javascript"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"myH1"</span>).innerHTML=<span class="hljs-string">"Welcome to my Homepage"</span>; <span class="hljs-comment">//javascipt</span>
+</code></pre>
+<pre><code class="hljs css cpp"><span class="hljs-built_in">string</span> &amp;<span class="hljs-keyword">operator</span>+(<span class="hljs-keyword">const</span> <span class="hljs-built_in">string</span>&amp; A,<span class="hljs-keyword">const</span> <span class="hljs-built_in">string</span>&amp; B) <span class="hljs-comment">//cpp</span>
+</code></pre>
+<h2>表格</h2>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+<tr>
+<td>表格单元</td>
+<td>表格单元</td>
+</tr>
+</tbody>
+</table>
+<h3>对齐</h3>
+<p>表格可以指定对齐方式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col&ensp;3&ensp;is</td>
+<td style="text-align:center">some&ensp;wordy&ensp;text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col&ensp;2&ensp;is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra&ensp;stripes</td>
+<td style="text-align:center">are&ensp;neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h3>混合其他语法</h3>
+<p>表格单元中的内容可以和其他大多数GFM语法配合使用，如：&ensp;&ensp;</p>
+<h4>使用普通文本的删除线，斜体等效果</h4>
+<table>
+<thead>
+<tr>
+<th>名字</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td><s>Display&ensp;the</s>&ensp;help&ensp;window.</td>
+</tr>
+<tr>
+<td>Close</td>
+<td><em>Closes</em>&ensp;a&ensp;window</td>
+</tr>
+</tbody>
+</table>
+<h4>表格中嵌入图片（链接）</h4>
+<p>其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。</p>
+<table>
+<thead>
+<tr>
+<th>图片</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="http://www.baidu.com/img/bdlogo.gif" alt="baidu" title="百度logo"></td>
+<td>百度</td>
+</tr>
+</tbody>
+</table>
+<h2>表情</h2>
+<p>Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
+<p>比如<code>:blush:</code>，可以显示😊。</p>
+<p>具体每一个表情的符号码，可以查询GitHub的官方网页<a href="http://www.emoji-cheat-sheet.com">http://www.emoji-cheat-sheet.com</a>。</p>
+<p>但是这个网页每次都打开<strong>奇慢</strong>。。所以我整理到了本repo中，大家可以直接在此查看<a href="./emoji.md">emoji</a>。</p>
+<h2>diff语法</h2>
+<p>版本控制的系统中都少不了diff的功能，即展示一个文件内容的增加与删除。<br>
+GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示删除。</p>
+<p>其语法与代码高亮类似，只是在三个反引号后面写diff，<br>
+并且其内容中，以&ensp;<code>+</code>开头表示新增，<code>-</code>开头表示删除。</p>
+<p>效果如下：</p>
+<pre><code class="hljs css diff"><span class="hljs-addition">+ 鸟宿池边树，僧敲月下门</span>
+<span class="hljs-deletion">- 鸟宿池边树，僧推月下门</span>
+</code></pre>
+<hr>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/simiantong/common_resume_md.html"> ←  简历 </a><a class="docs-next button" href="/simiantong/common_img_md.html"> 图片  → </a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 贵州四面通科技有限公司.</section></footer></div></body></html>

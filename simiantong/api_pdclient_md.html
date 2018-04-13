@@ -1,0 +1,173 @@
+<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>pdclient</title><meta name="viewport" content="width=device-width"/><link rel="shortcut icon" href="img/favicon.ico"/><link rel="stylesheet" href="/simiantong/solarized-dark.css"/><link rel="stylesheet" href="/simiantong/css/main.css"/><script type="text/javascript" src="/simiantong/js/jquery-1.4.4.min.js"></script><script type="text/javascript" src="/simiantong/js/underscore-min.js"></script><link rel="stylesheet" href="/simiantong/ztree_toc/zTreeStyle.css"/><script type="text/javascript" src="/simiantong/ztree_toc/jquery.ztree.core-3.5.min.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/simiantong/"><img class="logo" src="/simiantong/img/logo.png"/><span class="headerTitle">四面通物流大超市</span></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/simiantong/help_js.html" target="_self">帮助</a></li><li><a href="/simiantong/md_container_md.html" target="_self">示例</a></li><li><a href="/simiantong/smt_tuxiang_png.html" target="_self">四面通</a></li><li><div><a id="modc_menu_api_pdshop_md" style="color:#FF4040;cursor:hand;">API</a><table id="modc_list_api_pdshop_md" style="display:none;margin-top:10px;border:0;"><tbody><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/simiantong/api_pdshop_md.html" target="_self">pdshop</a></td></tr><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/simiantong/api_pdclient_md.html" target="_self" style="color:#FF4040;">pdclient</a></td></tr></tbody></table><script>
+                        $('#modc_menu_api_pdshop_md').click(function(){
+                            $('#modc_menu_api_pdshop_md').next().fadeToggle();
+                        });
+                        </script></div></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><article><div><span><div style="display:flex;width: 100%;">
+            <div style="width:400px;"></div>
+            <div style="float:left;width:400px;position:fixed;">
+            <ul id="toc_root" class="ztree"><ul>
+            <script>
+            $(document).ready(function(){
+                $.fn.zTree.init($("#toc_root"), {"view":{"dblClickExpand":false,"showLine":true,"showIcon":false,"selectedMulti":false},"data":{"simpleData":{"enable":true,"idKey":"id","pIdKey":"pId"}}}, [{"id":"toc_id_0","name":"目录","open":true},{"id":"toc_id_1","pId":"toc_id_0","name":"1    基础api","open":true,"url":"#head_id_1","target":"_self"},{"id":"toc_id_1_1","pId":"toc_id_1","name":"1.1    登录","open":true,"url":"#head_id_1_1","target":"_self"},{"id":"toc_id_1_2","pId":"toc_id_1","name":"1.2    注册","open":true,"url":"#head_id_1_2","target":"_self"},{"id":"toc_id_1_3","pId":"toc_id_1","name":"1.3    发送验证码","open":true,"url":"#head_id_1_3","target":"_self"},{"id":"toc_id_2","pId":"toc_id_0","name":"2    协议文档","open":true,"url":"#head_id_2","target":"_self"},{"id":"toc_id_2_1","pId":"toc_id_2","name":"2.1    用户协议","open":true,"url":"#head_id_2_1","target":"_self"},{"id":"toc_id_2_2","pId":"toc_id_2","name":"2.2    获取软件许可协议","open":true,"url":"#head_id_2_2","target":"_self"},{"id":"toc_id_2_3","pId":"toc_id_2","name":"2.3    关于","open":true,"url":"#head_id_2_3","target":"_self"}]);
+            });
+            </script>
+            </div>
+            <div style="flex:1;"><h1>pdclient接口文档</h1>
+
+                <h2>
+                <a class="anchor" aria-hidden="true" id="head_id_1"></a>
+                
+                <span style="margin-right: 10px;">1</span>
+                基础api</h2>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_1_1"></a>
+                
+                <span style="margin-right: 10px;">1.1</span>
+                登录</h3>
+<ul>
+<li><code>login</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录密码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"context"</span>: {
+        <span class="hljs-string">"userId"</span>: <span class="hljs-string">"10000"</span>
+    }
+}
+</code></pre>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_1_2"></a>
+                
+                <span style="margin-right: 10px;">1.2</span>
+                注册</h3>
+<ul>
+<li><code>register</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">找回密码的邮箱</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录密码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_1_3"></a>
+                
+                <span style="margin-right: 10px;">1.3</span>
+                发送验证码</h3>
+<ul>
+<li><code>requestSendVerifyCode</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<hr>
+
+                <h2>
+                <a class="anchor" aria-hidden="true" id="head_id_2"></a>
+                
+                <span style="margin-right: 10px;">2</span>
+                协议文档</h2>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_2_1"></a>
+                
+                <span style="margin-right: 10px;">2.1</span>
+                用户协议</h3>
+<ul>
+<li><code>user</code></li>
+<li>url:&ensp;<code>protocals/user.html</code></li>
+</ul>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_2_2"></a>
+                
+                <span style="margin-right: 10px;">2.2</span>
+                获取软件许可协议</h3>
+<ul>
+<li><code>software</code></li>
+<li>url:&ensp;<code>protocals/software.html</code></li>
+</ul>
+<hr>
+
+                <h3>
+                <a class="anchor" aria-hidden="true" id="head_id_2_3"></a>
+                
+                <span style="margin-right: 10px;">2.3</span>
+                关于</h3>
+<ul>
+<li><code>about</code></li>
+<li>url:&ensp;<code>protocals/about.html</code></li>
+</ul>
+</div></div></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/simiantong/api_pdshop_md.html"> ←  pdshop </a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 贵州四面通科技有限公司.</section></footer></div></body></html>
