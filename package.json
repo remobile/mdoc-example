@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "start": "mdoc-start",
-    "build": "mdoc-build"
+    "mdoc": "mdoc",
   },
   "devDependencies": {
     "mdoc": "git+https://github.com/remobile/mdoc.git"
