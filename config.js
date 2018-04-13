@@ -1,7 +1,7 @@
 const markdownPlugins = require('./lib/markdownPlugins');
 
 const config = {
-    projectName: 'simiantong',
+    projectName: 'mdoc-example',
     title: '四面通物流大超市',
     favicon: 'img/favicon.ico',
     logo: 'img/logo.png',
