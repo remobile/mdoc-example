@@ -173,6 +173,26 @@ const config = {
                 },
             ],
         },
+        {
+            name: 'baidu',
+            mainPage: 'https://www.baidu.com/',
+            blank: true,
+        },
+        {
+            name: 'githubs',
+            pages: [
+                {
+                    name: 'mdoc-example',
+                    path: 'https://github.com/remobile/mdoc-example',
+                    blank: true,
+                },
+                {
+                    name: 'mdoc',
+                    path: 'https://github.com/remobile/mdoc',
+                    blank: true,
+                },
+            ],
+        },
     ],
 };
 
