@@ -271,6 +271,11 @@ Usage: script [options]
 ![马长嘶](audio/horse.mp3){video autoplay controls}
 ```
 
+## 超链接
+
+默认情况下，以`http(s):`开头的会在新窗口打开，其他的在本窗口打开。
+
+在config中设置 `urlTarget: '_blank'`，都在新窗口打开；设置 `urlTarget: '_self'`，都在本窗口打开。
 
 ## 关联
 
