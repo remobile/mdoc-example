@@ -29,7 +29,7 @@ class WhyReactNativeIsSoGreat extends Component {
 const supportLinks = [
     {
         content:
-        'Learn more using the [documentation on this site.](/simiantong/gongsi_fengcai1_md.html)',
+        'Learn more using the [documentation on this site.](gongsi_fengcai1_md.html)',
         title: 'Browse Docs',
     },
     {

@@ -20,9 +20,8 @@ const config = {
     scripts: [],
     footer: 'lib/Footer.js', //设置footer
     homePage: {
-        name: '四面通',
-        path: 'index.js',
-        styles: ['css/custom.css'],
+        name: 'mdoc的用法',
+        path: 'index.md',
     },
     menus: [
         {
@@ -43,6 +42,10 @@ const config = {
                                 dom: 'div', // default: div
                                 props: { className: 'resumeContainer' },
                             }
+                        },
+                        {
+                            name: '超链接',
+                            path: 'common/href.md',
                         },
                         {
                             name: 'README',
@@ -113,6 +116,16 @@ const config = {
             name: '四面通',
             mainPage: 'smt/tuxiang.png',
             groups: [
+                {
+                    name: '快速了解',
+                    pages: [
+                        {
+                            name: '概括',
+                            path: 'smt/index.js',
+                            styles: ['css/custom.css'],
+                        },
+                    ]
+                },
                 {
                     name: '公司风采',
                     pages: [

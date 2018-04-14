@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "mdoc": "mdoc",
+    "mdoc": "mdoc"
   },
   "devDependencies": {
     "mdoc": "git+https://github.com/remobile/mdoc.git"

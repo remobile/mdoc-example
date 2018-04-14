@@ -23,12 +23,12 @@ class Button extends React.Component {
 class Index extends React.Component {
     render() {
         return (
-            <div style={{marginTop: 300, marginBottom: 300, paddingLeft: 300}}>
-                <Button href={config.baseUrl + 'gongsi_fengcai1_md.html'} target='_self'>
-                    公司风采1
+            <div style={{marginTop: 300, marginBottom: 300, paddingLeft: 30}}>
+                <Button href={'smt_user_html.html'} target='_self'>
+                    用户须知
                 </Button>
-                <Button href={config.baseUrl + 'gongsi_fengcai2_md.html'} target='_self'>
-                    公司风采2
+                <Button href={'smt_zhaopin_md.html'} target='_self'>
+                    招聘信息
                 </Button>
             </div>
         );
