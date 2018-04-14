@@ -48,6 +48,10 @@ const config = {
                             path: 'common/href.md',
                         },
                         {
+                            name: '音视频',
+                            path: 'common/media.md',
+                        },
+                        {
                             name: 'README',
                             path: 'common/README.md',
                         },
