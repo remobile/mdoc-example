@@ -2,8 +2,7 @@
 
 ## 图1
 
-::: flow
-
+``` flow
 st=>start: Start:>http://www.google.com[blank]
 e=>end:>http://www.google.com
 op1=>operation: My Operation
@@ -17,13 +16,11 @@ cond(yes, right)->c2
 cond(no)->sub1(left)->op1
 c2(true)->io->e
 c2(false)->op2->e
-
-:::
+```
 
 ## 图2
 
-::: flow
-
+``` flow
 st=>start: Start:>http://www.google.com[blank]
 e=>end:>http://www.google.com
 op1=>operation: My Operation
@@ -37,5 +34,4 @@ cond(yes, right)->c2
 cond(no)->sub1(left)->op1
 c2(true)->io->e
 c2(false)->op2->e
-
-:::
+```
