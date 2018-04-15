@@ -18,7 +18,7 @@ npm install git+https://github.com/remobile/mdoc.git --save
 
 建议将该工程 clone 下来然后修改。
 
-然后执行 npm run mdoc -s
+然后执行 npm run mdoc -- -s
 
 在浏览器中输入：http://localhost:4000/mdoc-example
 
@@ -205,7 +205,7 @@ module.exports = config;
 ## 编译工程release
 
 ```sh
-npm run mdoc -b
+npm run mdoc -- -b
 ```
 
 ## 编译单个文件
@@ -213,7 +213,7 @@ npm run mdoc -b
 参考conf中的各个文件，支持功能config中page的所有配置
 
 ```sh
-npm run mdoc -f conf/chart.js
+npm run mdoc -- -f conf/chart.js
 ```
 
 ```js
@@ -228,7 +228,7 @@ module.exports = {
 ## 命名行
 
 ```sh
-npm run mdoc -h
+npm run mdoc -- -h
 ```
 
 ```
