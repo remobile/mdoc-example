@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'/>
+
+<title>仿微信自定义菜单全屏自适应手机底部弹出菜单js特效代码</title>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;}
+#menu {
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	height:44px;
+	line-height:44px;
+	z-index:999;
+	border-top:1px solid #C0C0C0;
+	display: flex;
+	list-style-type:none;
+}
+#menu > li:not(:first-child) {
+	border-left: 1px solid #C0C0C0;
+}
+#menu li{
+	flex: 1;
+	height:100%;
+	text-align:center;
+	position:relative;
+	font-size:14px;
+	color:#454545;
+}
+#menu li .menu_li{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:20;
+	background:linear-gradient(#F1F1F1, #DDDDDD);
+}
+#menu li span{
+	position:absolute;
+	bottom:-800px;
+	width:100%;
+	margin-left:-50%;
+	height:auto;
+	text-align:
+	center;
+	z-index:10;
+}
+#menu li span a{
+	float:left;
+	width:100%;
+	height:43px;
+	line-height:43px;
+	color:#454545;
+	text-decoration:none;
+	border-top:1px solid #C0C0C0;
+	border-right:1px solid #C0C0C0;
+	border-left:1px solid #C0C0C0;
+}
+</style>
+</head>
+
+<body>
+	<ul id="menu">
+		<li>
+			<div class="menu_li">网页特效</div>
+			<span>
+				<div>
+					<a href="">html5模板</a>
+					<a href="">手机js特效</a>
+					<a href="">微测试</a>
+					<a href="">微游戏</a>
+				</div>
+			</span>
+		</li>
+		<li>
+			<div class="menu_li">手机特效</div>
+			<span>
+				<div>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+				</div>
+			</span>
+		</li>
+		<li>
+			<div class="menu_li">手机特效</div>
+			<span>
+				<div>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+				</div>
+			</span>
+		</li>
+		<li>
+			<div class="menu_li">手机app</div>
+			<span>
+				<div>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+					<a href="">咨询购买</a>
+				</div>
+			</span>
+		</li>
+	</ul>
+
+
+<script type="text/javascript">
+$('#menu li').each(function(li){
+	$(this).click(function(){
+		if($(this).attr("class")!="on"){
+			$('#menu .on span').animate({bottom:-$('#menu .on span').height()},200);
+			$('#menu .on').removeClass("on");
+			$(this).addClass("on");
+			$('#menu li span').eq(li).animate({bottom:44},200);
+		}else{
+			$('#menu li span').eq(li).animate({bottom:-$('#menu li span').eq(li).height()},200);
+			$(this).removeClass("on");
+		}
+	});
+});
+</script>
+</body>
+</html>
