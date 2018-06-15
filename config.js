@@ -36,6 +36,10 @@ const config = {
                     name: '常用',
                     pages: [
                         {
+                            name: '新闻',
+                            path: 'common/news.md',
+                        },
+                        {
                             name: '简历',
                             path: 'common/resume.md',
                             container: {
