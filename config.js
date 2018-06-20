@@ -73,6 +73,11 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: '图片列表',
+                            path: 'md/images.md',
+                            supports: ['viewer'],
+                        },
+                        {
                             name: 'attrs',
                             path: 'md/attrs.md',
                         },
