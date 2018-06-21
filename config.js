@@ -7,7 +7,7 @@ const config = {
     logo: 'img/logo.png',
     colors: {
         primaryColor: 'rgb(34, 34, 34)',
-        secondaryColor: '#05A5D1',
+        secondaryColor: '#FF8C00',
         activeColor: '#FF4040',
         tintColor: '#005068',
     },
