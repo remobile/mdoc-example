@@ -133,6 +133,10 @@ const config = {
                     name: '快速了解',
                     pages: [
                         {
+                            name: '四面通物流组织结构',
+                            path: 'smt/四面通物流组织结构.png',
+                        },
+                        {
                             name: '概括',
                             path: 'smt/index.js',
                             styles: ['css/custom.css'],
