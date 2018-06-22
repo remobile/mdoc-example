@@ -73,6 +73,11 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: 'swiper',
+                            path: 'md/swiper.md',
+                            supports: ['swiper'],
+                        },
+                        {
                             name: '图片列表',
                             path: 'md/images.md',
                             supports: ['viewer'],
