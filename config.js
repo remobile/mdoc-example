@@ -73,6 +73,11 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: 'react',
+                            path: 'md/react.md',
+                            supports: ['react'],
+                        },
+                        {
                             name: 'swiper',
                             path: 'md/swiper.md',
                             supports: ['swiper'],
