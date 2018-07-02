@@ -181,6 +181,11 @@ const config = {
                             name: '说明',
                             path: 'smt/test.pdf',
                         },
+                        {
+                            name: '动态React',
+                            path: 'button.js',
+                            supports: ['react'],
+                        },
                     ]
                 },
             ],
