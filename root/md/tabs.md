@@ -2,7 +2,7 @@
 
 ## tabs1
 
-::: tabs width=400 height=300
+::: tabs width=400 height=400
 
 --- tab1
 ![news1](img/news1.png){style="width:400px;height:300px"}
