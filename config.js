@@ -73,14 +73,19 @@ const config = {
                     name: '插件',
                     pages: [
                         {
-                            name: 'react',
-                            path: 'md/react.md',
-                            supports: ['react'],
+                            name: 'tabs',
+                            path: 'md/tabs.md',
+                            supports: ['tabs'],
                         },
                         {
                             name: 'swiper',
                             path: 'md/swiper.md',
                             supports: ['swiper'],
+                        },
+                        {
+                            name: 'react',
+                            path: 'md/react.md',
+                            supports: ['react'],
                         },
                         {
                             name: '图片列表',

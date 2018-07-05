@@ -1,29 +1,30 @@
-### 这是swiper示例的页面
+### 这是tabs示例的页面
 
-## swiper1
+## tabs1
 
-::: swiper width=400 height=300
+::: tabs width=400 height=300
 
+--- tab1
 ![news1](img/news1.png){style="width:400px;height:300px"}
----
+--- tab2
 ![news2](img/news2.png){style="width:400px;height:300px"}
----
+--- tab3
 ![news3](img/news3.png){style="width:400px;height:300px"}
----
+
 
 :::
 
-## swiper2
+## tabs2
 
-::: swiper  width=300 height=300
+::: tabs  width=300 height=300
 
+--- tab1
 ``` js
 123
 ```
----
+--- tab2
 ## 234
----
+--- tab3
 *345*
----
 
 :::
