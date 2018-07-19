@@ -73,6 +73,11 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: '表单',
+                            path: 'md/form.md',
+                            supports: ['antd'],
+                        },
+                        {
                             name: 'tabs',
                             path: 'md/tabs.md',
                             supports: ['tabs'],
