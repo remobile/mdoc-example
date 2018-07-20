@@ -12,7 +12,7 @@ title=联系电话 dataIndex=phoneList
 ```
 
 ## table2
-``` table tabs width=720 url=http://localhost:3000/api/shop/getInfoRecords  params={userId=5b4e979194fc8a28d9f9cff2} pageSize=2 hasTotalCount
+``` table tabs width=720 url=http://localhost:3000/api/shop/getInfoRecords  params={userId=5b4e979194fc8a28d9f9cff2} pageSize=2 !hasTotalCount
 --- shopmember 总部员工
 title=姓名 dataIndex=name
 title=年龄 dataIndex=age
