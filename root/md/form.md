@@ -2,7 +2,7 @@
 
 ## form1
 
-``` form width=800 url=/api/client/register {style="color:red;"}
+``` form width=800 url=http://localhost:3000/api/client/register
 label=手机号码 key=phone type=text rules=telephone maxLength=11
 label=验证码 key=verifyCode type=text rules=verifyCode maxLength=6
 label=密码 key=password type=text rules=password->rePassword maxLength=20

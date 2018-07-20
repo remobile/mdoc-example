@@ -78,6 +78,11 @@ const config = {
                             supports: ['antd'],
                         },
                         {
+                            name: '表格',
+                            path: 'md/table.md',
+                            supports: ['antd'],
+                        },
+                        {
                             name: 'tabs',
                             path: 'md/tabs.md',
                             supports: ['tabs'],
