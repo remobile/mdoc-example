@@ -4,6 +4,8 @@
 
 这个可以链接到 [fang](#fang).
 
+这个可以链接到 [flow的图2](md/flow.md#图2).
+
 I get 10 times more traffic from [baidu][1] than from [oschina][2].
 
 1

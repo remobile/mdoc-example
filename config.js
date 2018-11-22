@@ -73,6 +73,10 @@ const config = {
                     name: '插件',
                     pages: [
                         {
+                            name: 'list',
+                            path: 'md/list.md',
+                        },
+                        {
                             name: '工具',
                             path: 'md/tools.md',
                         },
