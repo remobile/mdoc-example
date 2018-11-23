@@ -2,7 +2,7 @@
 
 这是一个日历控件：
 
-[CALENDER]
+[CALENDAR]
 
 这是一个时间控件：
 
