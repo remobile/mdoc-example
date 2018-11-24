@@ -36,6 +36,10 @@ const config = {
                     name: '常用',
                     pages: [
                         {
+                            name: '对联',
+                            path: 'common/mixed.md',
+                        },
+                        {
                             name: '新闻',
                             path: 'common/news.md',
                         },
