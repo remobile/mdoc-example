@@ -36,6 +36,10 @@ const config = {
                     name: '常用',
                     pages: [
                         {
+                            name: 'fragment',
+                            path: 'md/fragment.md',
+                        },
+                        {
                             name: '对联',
                             path: 'common/mixed.md',
                         },
