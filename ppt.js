@@ -18,6 +18,10 @@ const config = {
     documentPath: 'ppt', //默认为doc
     styles: [],
     scripts: [],
+    // theme: 'beige', // beige black blood league moon night serif simple sky solarized white
+    transition: 'slide', // none fade slide convex concave
+    backgroundImage: 'ppt/background.png',
+    disableLayout: true,
     pages: [
         {
             name: '第一页',
@@ -26,8 +30,20 @@ const config = {
         {
             name: '第二页',
             path: '2.md',
+            transition: 'zoom',
         },
-
+        {
+            name: '第三页',
+            path: '3.md',
+        },
+        {
+            name: '第四页',
+            path: '4.md',
+        },
+        {
+            name: '第五页',
+            path: '5.md',
+        },
     ],
 };
 
