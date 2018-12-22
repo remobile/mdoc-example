@@ -18,7 +18,6 @@ const config = {
     documentPath: 'ppt', //默认为doc
     styles: [],
     scripts: [],
-    // theme: 'beige', // beige black blood league moon night serif simple sky solarized white
     transition: 'slide', // none fade slide convex concave
     backgroundImage: 'ppt/background.png',
     disableLayout: true,
