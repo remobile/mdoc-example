@@ -1,0 +1,206 @@
+<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta content="http://localhost:3000"/><meta name="viewport" content="width=device-width"/><title>pdclient</title><link rel="shortcut icon" href="img/favicon.ico"/><link rel="stylesheet" href="solarized-dark.css"/><link rel="stylesheet" href="css/main.css"/><script type="text/javascript" src="js/jquery-1.4.4.min.js"></script><script type="text/javascript" src="js/underscore-min.js"></script><link rel="stylesheet" href="ztree_toc/zTreeStyle.css"/><script type="text/javascript" src="ztree_toc/jquery.ztree.core-3.5.min.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/mdoc-example/"><img class="logo" src="/mdoc-example/img/logo.png"/><span class="headerTitle">四面通物流大超市</span></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="6c22d2b7e82045f8015c8eb010992d80.html" target="_self">帮助</a></li><li><a href="2c2d30a67c1bd2565218634788e5cea1.html" target="_self">示例</a></li><li><a href="a2f9ac68fb3fa88d8a9e5414ec8be2fb.html" target="_self">四面通</a></li><li><div><a id="mdoc_menu_8408b17aaa2f56980f9d0588eb18942e" style="color:#FF4040;cursor:hand;">API</a><table class="mdoc_select_menu_table"><tbody><tr><td><a href="8408b17aaa2f56980f9d0588eb18942e.html" target="_self">pdshop</a></td></tr><tr><td><a href="8aa8c5f6f0236702e95d58b29f7a6036.html" target="_self" style="color:#FF4040;">pdclient</a></td></tr></tbody></table><script>
+                        $('#mdoc_menu_8408b17aaa2f56980f9d0588eb18942e').click(function(){
+                            var el = $('#mdoc_menu_8408b17aaa2f56980f9d0588eb18942e').next();
+                            var isHide = el.is(':hidden');
+                            $('.mdoc_select_menu_table').hide();
+                            if (isHide) {
+                                var offset = ($(this).outerWidth()-100)/2;
+                                $('.mdoc_select_menu_table').css('transform', 'translateX('+offset+'px)');
+                                el.show();
+                            } else {
+                                el.hide();
+                            }
+                        });
+                        </script></div></li><li><a href="https://www.baidu.com/" target="_blank">baidu</a></li><li><div><a id="mdoc_menu_a629266e4a02ff20122f6f756e1da062" style="cursor:hand;">githubs</a><table class="mdoc_select_menu_table"><tbody><tr><td><a href="https://github.com/remobile/mdoc-example" target="_blank" onclick="$(event.target).parents('.mdoc_select_menu_table').hide()">mdoc-example</a></td></tr><tr><td><a href="https://github.com/remobile/mdoc" target="_blank" onclick="$(event.target).parents('.mdoc_select_menu_table').hide()">mdoc</a></td></tr></tbody></table><script>
+                        $('#mdoc_menu_a629266e4a02ff20122f6f756e1da062').click(function(){
+                            var el = $('#mdoc_menu_a629266e4a02ff20122f6f756e1da062').next();
+                            var isHide = el.is(':hidden');
+                            $('.mdoc_select_menu_table').hide();
+                            if (isHide) {
+                                var offset = ($(this).outerWidth()-100)/2;
+                                $('.mdoc_select_menu_table').css('transform', 'translateX('+offset+'px)');
+                                el.show();
+                            } else {
+                                el.hide();
+                            }
+                        });
+                        </script></div></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><article><div><span>
+            <div class="mdoc_toc_list"><ul><ul><li><a class="anchor" aria-hidden="true" href="#head_id_1" id="toc_id_1"><span style="margin-right: 12px;">1</span>基础api</a></li><ul><li><a class="anchor" aria-hidden="true" href="#head_id_1_1" id="toc_id_1_1"><span style="margin-right: 12px;">1.1</span>登录</a></li><li><a class="anchor" aria-hidden="true" href="#head_id_1_2" id="toc_id_1_2"><span style="margin-right: 12px;">1.2</span>注册</a></li><li><a class="anchor" aria-hidden="true" href="#head_id_1_3" id="toc_id_1_3"><span style="margin-right: 12px;">1.3</span>发送验证码</a></li></ul><li><a class="anchor" aria-hidden="true" href="#head_id_2" id="toc_id_2"><span style="margin-right: 12px;">2</span>协议文档</a></li><ul><li><a class="anchor" aria-hidden="true" href="#head_id_2_1" id="toc_id_2_1"><span style="margin-right: 12px;">2.1</span>用户协议</a></li><li><a class="anchor" aria-hidden="true" href="#head_id_2_2" id="toc_id_2_2"><span style="margin-right: 12px;">2.2</span>获取软件许可协议</a></li><li><a class="anchor" aria-hidden="true" href="#head_id_2_3" id="toc_id_2_3"><span style="margin-right: 12px;">2.3</span>关于</a></li></ul></ul></ul></div>
+            <div id="mdoc_toc_container">
+            <style>code{max-width:800px;}</style>
+            <div id="mdoc_toc_sidebar" style="width:400px;"></div>
+            <div id="mdoc_toc_menu" style="float:left;width:320px;position:fixed;max-height:80%;overflow:scroll;">
+            <ul id="toc_root" class="ztree"><ul>
+            <script>
+            $(document).ready(function(){
+                if ($(window).width()<=735) {
+                    $(".mdoc_toc_list").show();
+                    $("#mdoc_toc_sidebar").hide();
+                    $("#mdoc_toc_menu").hide();
+                } else {
+                    $(".mdoc_toc_list").hide();
+                    $.fn.zTree.init($("#toc_root"), {"view":{"dblClickExpand":false,"showLine":true,"showIcon":false,"selectedMulti":false},"data":{"simpleData":{"enable":true,"idKey":"id","pIdKey":"pId"}}}, [{"id":"toc_id_0","name":"目录","open":true},{"id":"toc_id_1","pId":"toc_id_0","name":"1    基础api","open":true,"url":"#head_id_1","target":"_self"},{"id":"toc_id_1_1","pId":"toc_id_1","name":"1.1    登录","open":true,"url":"#head_id_1_1","target":"_self"},{"id":"toc_id_1_2","pId":"toc_id_1","name":"1.2    注册","open":true,"url":"#head_id_1_2","target":"_self"},{"id":"toc_id_1_3","pId":"toc_id_1","name":"1.3    发送验证码","open":true,"url":"#head_id_1_3","target":"_self"},{"id":"toc_id_2","pId":"toc_id_0","name":"2    协议文档","open":true,"url":"#head_id_2","target":"_self"},{"id":"toc_id_2_1","pId":"toc_id_2","name":"2.1    用户协议","open":true,"url":"#head_id_2_1","target":"_self"},{"id":"toc_id_2_2","pId":"toc_id_2","name":"2.2    获取软件许可协议","open":true,"url":"#head_id_2_2","target":"_self"},{"id":"toc_id_2_3","pId":"toc_id_2","name":"2.3    关于","open":true,"url":"#head_id_2_3","target":"_self"}]);
+                }
+            });
+            </script>
+            </div>
+            <div style="flex:1;">
+            <h1 ><a class="anchor" aria-hidden="true" id="c84ee04ea3680a5e4e856c181cbd0a8a"></a>pdclient接口文档</h1>
+
+                <h2 >
+                <a class="anchor" aria-hidden="true" id="head_id_1"></a>
+                
+                <span style="margin-right: 10px;">1</span>
+                基础api</h2>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_1_1"></a>
+                
+                <span style="margin-right: 10px;">1.1</span>
+                登录</h3>
+<ul>
+<li><code>login</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录密码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"context"</span>: {
+        <span class="hljs-string">"userId"</span>: <span class="hljs-string">"10000"</span>
+    }
+}
+</code></pre>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_1_2"></a>
+                
+                <span style="margin-right: 10px;">1.2</span>
+                注册</h3>
+<ul>
+<li><code>register</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+<tr>
+<td style="text-align:left">email</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">找回密码的邮箱</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录密码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_1_3"></a>
+                
+                <span style="margin-right: 10px;">1.3</span>
+                发送验证码</h3>
+<ul>
+<li><code>requestSendVerifyCode</code></li>
+<li>请求方式：<code>POST</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名称</th>
+<th style="text-align:center">参数类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">phone</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">登录手机号码</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css js">{
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<hr>
+
+                <h2 >
+                <a class="anchor" aria-hidden="true" id="head_id_2"></a>
+                
+                <span style="margin-right: 10px;">2</span>
+                协议文档</h2>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_2_1"></a>
+                
+                <span style="margin-right: 10px;">2.1</span>
+                用户协议</h3>
+<ul>
+<li><code>user</code></li>
+<li>url:&ensp;<code>protocals/user.html</code></li>
+</ul>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_2_2"></a>
+                
+                <span style="margin-right: 10px;">2.2</span>
+                获取软件许可协议</h3>
+<ul>
+<li><code>software</code></li>
+<li>url:&ensp;<code>protocals/software.html</code></li>
+</ul>
+<hr>
+
+                <h3 >
+                <a class="anchor" aria-hidden="true" id="head_id_2_3"></a>
+                
+                <span style="margin-right: 10px;">2.3</span>
+                关于</h3>
+<ul>
+<li><code>about</code></li>
+<li>url:&ensp;<code>protocals/about.html</code></li>
+</ul>
+</div></div></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="8408b17aaa2f56980f9d0588eb18942e.html"> ←  pdshop </a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 贵州四面通科技有限公司.</section></footer></div></body></html>
