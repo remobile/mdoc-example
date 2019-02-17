@@ -227,13 +227,41 @@ const config = {
                 },
             ],
         },
-
+        {
+            name: 'API',
+            pages: [
+                {
+                    name: 'pdshop',
+                    path: 'api/pdshop.md',
+                    supports: ['tree'],
+                },
+                {
+                    name: 'pdclient',
+                    path: 'api/pdclient.md',
+                    supports: ['tree'],
+                },
+            ],
+        },
         {
             name: 'baidu',
             mainPage: 'https://www.baidu.com/',
             blank: true,
         },
-
+        {
+            name: 'githubs',
+            pages: [
+                {
+                    name: 'mdoc-example',
+                    path: 'https://github.com/remobile/mdoc-example',
+                    blank: true,
+                },
+                {
+                    name: 'mdoc',
+                    path: 'https://github.com/remobile/mdoc',
+                    blank: true,
+                },
+            ],
+        },
     ],
 };
 
