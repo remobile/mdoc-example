@@ -19,6 +19,7 @@ const config = {
     styles: [],
     scripts: [],
     footer: 'lib/Footer.js', //设置footer
+    sideNavCollapsible: true, // 侧边栏是否可以折叠
     homePage: {
         name: 'mdoc的用法',
         path: 'index.md',
