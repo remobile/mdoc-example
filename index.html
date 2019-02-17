@@ -1,5 +1,267 @@
-<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>四面通</title><meta name="viewport" content="width=device-width"/><link rel="shortcut icon" href="img/favicon.ico"/><link rel="stylesheet" href="/mdoc-example/solarized-dark.css"/><link rel="stylesheet" href="/mdoc-example/css/main.css"/><script type="text/javascript" src="/mdoc-example/js/jquery-1.4.4.min.js"></script><script type="text/javascript" src="/mdoc-example/js/underscore-min.js"></script><link rel="stylesheet" href="css/custom.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/mdoc-example/"><img class="logo" src="/mdoc-example/img/logo.png"/><span class="headerTitle">四面通物流大超市</span></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/mdoc-example/help_js.html" target="_self">帮助</a></li><li><a href="/mdoc-example/md_container_md.html" target="_self">示例</a></li><li><a href="/mdoc-example/smt_tuxiang_png.html" target="_self">四面通</a></li><li><div><a id="modc_menu_api_pdshop_md" style="cursor:hand;">API</a><table id="modc_list_api_pdshop_md" style="display:none;margin-top:10px;border:0;"><tbody><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/mdoc-example/api_pdshop_md.html" target="_self">pdshop</a></td></tr><tr><td style="background-color:rgb(34, 34, 34);border-top:solid 1px gray;"><a href="/mdoc-example/api_pdclient_md.html" target="_self">pdclient</a></td></tr></tbody></table><script>
-                        $('#modc_menu_api_pdshop_md').click(function(){
-                            $('#modc_menu_api_pdshop_md').next().fadeToggle();
-                        });
-                        </script></div></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><article><div style="margin-top:300px;margin-bottom:300px;padding-left:300px;"><a class="big-button" href="/mdoc-example/gongsi_fengcai1_md.html" target="_self">公司风采1</a><a class="big-button" href="/mdoc-example/gongsi_fengcai2_md.html" target="_self">公司风采2</a></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 贵州四面通科技有限公司.</section></footer></div></body></html>
+<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta content="http://localhost:3000"/><meta name="viewport" content="width=device-width"/><title>mdoc的用法</title><link rel="shortcut icon" href="img/favicon.ico"/><link rel="stylesheet" href="solarized-dark.css"/><link rel="stylesheet" href="css/main.css"/><script type="text/javascript" src="js/jquery-1.4.4.min.js"></script><script type="text/javascript" src="js/underscore-min.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/mdoc-example/"><img class="logo" src="/mdoc-example/img/logo.png"/><span class="headerTitle">四面通物流大超市</span></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="6c22d2b7e82045f8015c8eb010992d80.html" target="_self">帮助</a></li><li><a href="2c2d30a67c1bd2565218634788e5cea1.html" target="_self">示例</a></li><li><a href="a2f9ac68fb3fa88d8a9e5414ec8be2fb.html" target="_self">四面通</a></li><li><a href="https://www.baidu.com/" target="_blank">baidu</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><article><div><span><h1 ><a class="anchor" aria-hidden="true" id="e4568847288c131f64215171f0a1b6f5"></a>引言</h1>
+<p>mdoc&ensp;是一个使用能够快速显示&ensp;markdown、html、react、图片、pdf&ensp;的博客和文档框架。能够用来快速搭建静态博客和帮助文档工程。</p>
+<h2 ><a class="anchor" aria-hidden="true" id="e655a410ff21cd07e7a0150491e04371"></a>安装</h2>
+<pre><code class="hljs css sh">mkdir yourProject
+
+<span class="hljs-built_in">cd</span> yourProject
+
+npm install git+https://github.com/remobile/mdoc.git --save
+
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="480c216fb9f264085ac2a89b46347611"></a>实例</h2>
+<p>参考&ensp;<a href="https://github.com/remobile/mdoc-example" target="_blank">https://github.com/remobile/mdoc-example</a></p>
+<p>建议将该工程&ensp;clone&ensp;下来然后修改。</p>
+<p>然后执行&ensp;npm&ensp;run&ensp;mdoc&ensp;--&ensp;-s</p>
+<p>在浏览器中输入：<a href="http://localhost:4000/mdoc-example" target="_blank">http://localhost:4000/mdoc-example</a></p>
+<h2 ><a class="anchor" aria-hidden="true" id="7fcc8db1614ab9349a8c54af64ce46be"></a>config.js&ensp;模板</h2>
+<pre><code class="hljs css js"><span class="hljs-keyword">const</span> markdownPlugins = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./lib/markdownPlugins'</span>);
+
+<span class="hljs-keyword">const</span> config = {
+    <span class="hljs-attr">projectName</span>: <span class="hljs-string">'mdoc-example'</span>, <span class="hljs-comment">// 工程名称，访问网站的时候会使用到：http://localhost:4000/mdoc-example</span>
+    title: <span class="hljs-string">'四面通物流大超市'</span>, <span class="hljs-comment">// html 的 title</span>
+    favicon: <span class="hljs-string">'img/favicon.ico'</span>, <span class="hljs-comment">// html 的 favicon</span>
+    logo: <span class="hljs-string">'img/logo.png'</span>, <span class="hljs-comment">// logo</span>
+    colors: { <span class="hljs-comment">// 颜色配置，在这里配置的颜色，在所有的css文件中使用 $primaryColor 来表示一个颜色即可 [可空]</span>
+        primaryColor: <span class="hljs-string">'rgb(34, 34, 34)'</span>,
+        <span class="hljs-attr">secondaryColor</span>: <span class="hljs-string">'#05A5D1'</span>,
+        <span class="hljs-attr">activeColor</span>: <span class="hljs-string">'#FF4040'</span>,
+        <span class="hljs-attr">tintColor</span>: <span class="hljs-string">'#005068'</span>,
+    },
+    <span class="hljs-attr">highlight</span>: { <span class="hljs-comment">// 代码的风格 [可空]</span>
+        theme: <span class="hljs-string">'solarized-dark'</span>,
+    },
+    markdownPlugins, <span class="hljs-comment">// 基于 markdown-it 的用户自定义 [可空]</span>
+    documentPath: <span class="hljs-string">'root'</span>, <span class="hljs-comment">//默认为doc [可空]</span>
+    styles: [], <span class="hljs-comment">// 整个工程的 style，全局有效 [可空]</span>
+    scripts: [], <span class="hljs-comment">// 整个工程的 script，全局有效 [可空]</span>
+    footer: <span class="hljs-string">'lib/Footer.js'</span>, <span class="hljs-comment">//设置footer [可空]</span>
+    homePage: {  <span class="hljs-comment">// 首页 （每个页面都可以配自己的styles和scripts）</span>
+        name: <span class="hljs-string">'mdoc的用法'</span>,  <span class="hljs-comment">// 标题</span>
+        path: <span class="hljs-string">'index.md'</span>,  <span class="hljs-comment">// 标题</span>
+    },
+    <span class="hljs-attr">menus</span>: [ <span class="hljs-comment">// 菜单，第一级会显示在顶部菜单栏，menus 包含多个 menu</span>
+        { <span class="hljs-comment">// 第一个 menu，这个menu没有groups和pages，只显示一个页面</span>
+            name: <span class="hljs-string">'帮助'</span>,  <span class="hljs-comment">// 标题及菜单名字</span>
+            mainPage: <span class="hljs-string">'help.js'</span>, <span class="hljs-comment">// 该菜单对应的首页</span>
+        },
+        {  <span class="hljs-comment">// 第二个 menu</span>
+            name: <span class="hljs-string">'示例'</span>,  <span class="hljs-comment">// 标题及菜单名字</span>
+            mainPage: <span class="hljs-string">'md/container.md'</span>, <span class="hljs-comment">// 该菜单对应的首页</span>
+            groups: [ <span class="hljs-comment">// groups 包含多个 group, 一个 group包含一个 name 和 多个页面，都会在左侧菜单中呈现</span>
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'常用'</span>, <span class="hljs-comment">// group的名称</span>
+                    pages: [ <span class="hljs-comment">// 该group包含的页面</span>
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'简历'</span>, <span class="hljs-comment">// 页面的名称及标题</span>
+                            path: <span class="hljs-string">'common/resume.md'</span>, <span class="hljs-comment">// 对应的路径</span>
+                            container: { <span class="hljs-comment">// 该页面拥有一个自定义的container</span>
+                                dom: <span class="hljs-string">'div'</span>, <span class="hljs-comment">// default: div [可空]</span>
+                                props: { <span class="hljs-attr">className</span>: <span class="hljs-string">'resumeContainer'</span> }, <span class="hljs-comment">// 该container的属性</span>
+                            }
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'README'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'common/README.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'图片'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'common/img.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'button'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'common/button.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'toc'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'common/toc.md'</span>,
+                            <span class="hljs-attr">tocList</span>: [<span class="hljs-string">'h2'</span>, <span class="hljs-string">'h3'</span>], <span class="hljs-comment">// 可选的值有: ['h2', 'h3'], true（true默认为['h2', 'h3']）</span>
+                        },
+                    ]
+                },
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'插件'</span>,
+                    <span class="hljs-attr">pages</span>: [
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'attrs'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/attrs.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'variable'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/variable.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'sequence'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/sequence.md'</span>,
+                            <span class="hljs-attr">supports</span>: [<span class="hljs-string">'sequence'</span>], <span class="hljs-comment">// 该页面支持 sequence，可用的有[sequence, chart, flow, math, tree]</span>
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'chart'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/chart.md'</span>,
+                            <span class="hljs-attr">supports</span>: [<span class="hljs-string">'chart'</span>],
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'flow'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/flow.md'</span>,
+                            <span class="hljs-attr">supports</span>: [<span class="hljs-string">'flow'</span>],
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'emoji'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/emoji.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'tabbreak'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/tabbreak.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'footnote'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/footnote.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'container'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/container.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'数学公式'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'md/katex.md'</span>,
+                            <span class="hljs-attr">supports</span>: [<span class="hljs-string">'math'</span>],
+                        },
+                    ]
+                },
+            ],
+        },
+        {  <span class="hljs-comment">// 第三个 menu</span>
+            name: <span class="hljs-string">'四面通'</span>,
+            <span class="hljs-attr">mainPage</span>: <span class="hljs-string">'smt/tuxiang.png'</span>,
+            <span class="hljs-attr">groups</span>: [
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'快速了解'</span>,
+                    <span class="hljs-attr">pages</span>: [
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'概括'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/index.js'</span>,
+                            <span class="hljs-attr">styles</span>: [<span class="hljs-string">'css/custom.css'</span>],  <span class="hljs-comment">// 该页面的style [可空]</span>
+                        },
+                    ]
+                },
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'公司风采'</span>,
+                    <span class="hljs-attr">pages</span>: [
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'公司面貌'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/tuxiang.png'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'api文档'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/api.md'</span>,
+                        },
+                    ]
+                },
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'招聘信息'</span>,
+                    <span class="hljs-attr">pages</span>: [
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'最新招聘'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/zhaopin.md'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'用户须知'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/user.html'</span>,
+                        },
+                        {
+                            <span class="hljs-attr">name</span>: <span class="hljs-string">'说明'</span>,
+                            <span class="hljs-attr">path</span>: <span class="hljs-string">'smt/test.pdf'</span>,
+                        },
+                    ]
+                },
+            ],
+        },
+        {  <span class="hljs-comment">// 第四个 menu item 没有 mainPage 和 groups， 但是拥有 pages，会以`下拉菜单`的方式，如果需要有树形目录的页面建议使用这种方式。</span>
+            name: <span class="hljs-string">'API'</span>,
+            <span class="hljs-attr">pages</span>: [
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'pdshop'</span>,
+                    <span class="hljs-attr">path</span>: <span class="hljs-string">'api/pdshop.md'</span>,
+                    <span class="hljs-attr">supports</span>: [<span class="hljs-string">'tree'</span>], <span class="hljs-comment">//是否支持树形结构</span>
+                },
+                {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">'pdclient'</span>,
+                    <span class="hljs-attr">path</span>: <span class="hljs-string">'api/pdclient.md'</span>,
+                    <span class="hljs-attr">supports</span>: [<span class="hljs-string">'tree'</span>],
+                },
+            ],
+        },
+    ],
+};
+
+<span class="hljs-built_in">module</span>.exports = config;
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="837ae09f8968e463b2b781695480a292"></a>编译工程release</h2>
+<pre><code class="hljs css sh">npm run mdoc -- -b
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="4951b8020c222e13e9c23ad997c39b75"></a>编译单个文件</h2>
+<p>参考conf中的各个文件，支持功能config中page的所有配置</p>
+<pre><code class="hljs css sh">npm run mdoc -- -f conf/chart.js
+</code></pre>
+<pre><code class="hljs css js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'chart'</span>, <span class="hljs-comment">//名称</span>
+    path: <span class="hljs-string">'md/chart.md'</span>, <span class="hljs-comment">// 路径，跟目录为工程config的documentPath，该文件只能为.md和.js类型</span>
+    supports: [<span class="hljs-string">'jquery'</span>, <span class="hljs-string">'chart'</span>], <span class="hljs-comment">//支持的功能,有 [main, code, jquery, _, tree, math, flow, sequence, chart] 其中main为main.css, _ 为 underscore</span>
+    dist: <span class="hljs-string">'1.html'</span>, <span class="hljs-comment">//目标文件，可以为目录，如果为目录，文件名称为 chart.html</span>
+};
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="defd8aacdf48f6b9ef2cfdde4c723aab"></a>命名行</h2>
+<pre><code class="hljs css sh">npm run mdoc -- -h
+</code></pre>
+<pre><code class="hljs">Usage:<span class="hljs-built_in"> script </span>[options]
+
+
+  Options:
+
+    -V, --version             output the version number
+    -p, --port [4000]        <span class="hljs-built_in"> port </span>of<span class="hljs-built_in"> server </span>(default: 4000)
+    -s, --start               start<span class="hljs-built_in"> server </span><span class="hljs-keyword">for</span> project
+    -b, --build               build release <span class="hljs-keyword">for</span> project
+    -f, --file &lt;config file&gt;  build single file with<span class="hljs-built_in"> config
+</span>    -h, --help                output usage information
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="de6104ca3fb5cb87820add115857409f"></a>文件路径</h2>
+<p>建议资源文件使用相对路径，如&ensp;<code>![美丽的小猫](img/cat.png)</code>,&ensp;不建议使用&ensp;<code>![美丽的小猫](/mdoc-example/img/cat.png)</code>，因为如果改变了&ensp;projectName&ensp;就需要做相应的修改.<br>
+超链接也建议使用相对路径：<code>这个可以链接到 [api](smt_api_md.html).</code></p>
+<h2 ><a class="anchor" aria-hidden="true" id="6729afc51f5ac49a828812fa0eb0c82f"></a>音视频</h2>
+<pre><code class="hljs"><span class="hljs-section">#### 棕熊的世界：</span>
+![<span class="hljs-string">棕熊的世界</span>](<span class="hljs-link">video/movie.mp4 "这是title信息"</span>){width=450px height=250px autoplay controls}
+
+<span class="hljs-section">#### 马长嘶：</span>
+![<span class="hljs-string">马长嘶</span>](<span class="hljs-link">audio/horse.mp3</span>){autoplay controls}
+</code></pre>
+<p>默认以<code>.mp4</code>和<code>.ogv</code>结尾的就是以video显示；以<code>.mp3</code>和<code>.ogv</code>结尾的就是以video显示。</p>
+<p>也可以在config中设置：<code>{ videoRegExp: /\.(mp4|ogv)$/, audioRegExp: /\.(mp3|ogg)$/ }</code>&ensp;的配置来判断</p>
+<p>还可以如下添加<code>video</code>和<code>audio</code>来强制显示video和audio</p>
+<pre><code class="hljs"><span class="hljs-section">#### 棕熊的世界(强制音频)：</span>
+![<span class="hljs-string">棕熊的世界</span>](<span class="hljs-link">video/movie.mp4 "这是title信息"</span>){audio autoplay controls}
+
+<span class="hljs-section">#### 马长嘶(强制视频)：</span>
+![<span class="hljs-string">马长嘶</span>](<span class="hljs-link">audio/horse.mp3</span>){video autoplay controls}
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="7d7894175ed646cd1d97c310aa9037c7"></a>超链接</h2>
+<p>默认情况下，以<code>http(s):</code>开头的会在新窗口打开，其他的在本窗口打开。</p>
+<p>在config中设置&ensp;<code>urlTarget: '_blank'</code>，都在新窗口打开；设置&ensp;<code>urlTarget: '_self'</code>，都在本窗口打开。</p>
+<h2 ><a class="anchor" aria-hidden="true" id="40784a91ecb3233e7f868946396e9360"></a>折叠侧边栏</h2>
+<p>在&ensp;config&ensp;中配置如下：</p>
+<pre><code class="hljs"><span class="hljs-string">sideNavCollapsible:</span> <span class="hljs-literal">true</span>, <span class="hljs-comment">// 侧边栏是否可以折叠</span>
+</code></pre>
+<h2 ><a class="anchor" aria-hidden="true" id="a34ad5778557306f165a845baa68d418"></a>右边导航栏</h2>
+<p>在&ensp;config&ensp;中的&ensp;page&ensp;配置如下：</p>
+<pre><code class="hljs css js">    {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'toc'</span>,
+        <span class="hljs-attr">path</span>: <span class="hljs-string">'common/toc.md'</span>,
+        <span class="hljs-attr">tocList</span>: [<span class="hljs-string">'h2'</span>, <span class="hljs-string">'h3'</span>], <span class="hljs-comment">// 可选的值有: ['h2', 'h3'], true（true默认为['h2', 'h3']）</span>
+    },
+</code></pre>
+<p>其中&ensp;tocList&ensp;如果为&ensp;true,&ensp;则右边导航栏采取&ensp;h2&ensp;和&ensp;h3&ensp;两级来显示，也可以配置为&ensp;<code>['h3', 'h4']</code>，采取&ensp;h3&ensp;和&ensp;h4&ensp;两级来显示。</p>
+<h2 ><a class="anchor" aria-hidden="true" id="1c3cf7f5f085596674018f3efc645be5"></a>关联</h2>
+<ul>
+<li><a href="https://github.com/markdown-it/markdown-it" target="_blank">https://github.com/markdown-it/markdown-it</a></li>
+<li><a href="https://reactjs.org/" target="_blank">https://reactjs.org/</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 贵州四面通科技有限公司.</section></footer></div></body></html>
