@@ -30,6 +30,45 @@ const config = {
             mainPage: 'help.js',
         },
         {
+            name: '文件夹展示1', // 如果没有该值，则为文件夹的名称 (expand 为 true 时无效)
+            folder: 'dir/menu', // 指定的路径
+            static: false, // 是否为static里面的文件
+            expand: false, // 如果为true,则该文件夹中的子文件夹在顶部展示为各个 menuItem，此时 name 无效，否则，以 name 为 menuItem，子文件夹为 group
+            // origin: 'https://raw.githubusercontent.com/blogoo/photo/master/', // 原始文件的链接
+        },
+        {
+            name: '文件夹展示2',
+            groups: [
+                {
+                    name: '文件夹展示实例1', // 如果没有该值，则为文件夹的名称 (expand 为 true 时无效)
+                    folder: 'dir/group', // 指定的路径
+                    static: false, // 是否为static里面的文件
+                    expand: false, // 如果为true,则该文件夹中的子文件夹在顶部展示为各个 group，此时 name 无效，否则，以 name 为 group，子文件夹为 group 的内容
+                    // origin: 'https://raw.githubusercontent.com/blogoo/photo/master/', // 原始文件的链接
+                },
+                {
+                    name: '文件夹展示实例2',
+                    pages: [
+                        {
+                            name: 'fragment',
+                            path: 'md/fragment.md',
+                        },
+                        {
+                            name: '文件夹展示实例3', // 如果没有该值，则为文件夹的名称 (expand 为 true 时无效)
+                            folder: 'dir/page', // 指定的路径
+                            static: false, // 是否为static里面的文件
+                            expand: true, // 如果为true,则该文件夹中的子文件夹在顶部展示为各个 page，此时 name 无效，否则，以 name 为 page，子文件夹为 page 的内容
+                            // origin: 'https://raw.githubusercontent.com/blogoo/photo/master/', // 原始文件的链接
+                        },
+                        {
+                            name: 'fragment',
+                            path: 'md/fragment.md',
+                        },
+                    ]
+                },
+            ]
+        },
+        {
             name: '示例',
             mainPage: 'md/container.md',
             groups: [
