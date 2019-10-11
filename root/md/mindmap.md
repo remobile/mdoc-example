@@ -1,19 +1,8 @@
-### 这是垂直树形控件的页面
+### 这是思维导图的页面
 
+## mindmap1
 
-<style>.myViewClass {color: red;}</style>
-<style>.myItemClass {color: blue;}</style>
-<script>
-function myClickTest(itemId, itemData, itemNode) {
-  console.log(itemId);
-  console.log(itemData);
-  console.log(itemNode);
-}
-</script>
-
-## untree1
-
-``` untree width=400 viewClass=myViewClass itemClass=myItemClass click=myClickTest
+``` mindmap width=600 height=400
 公司董事会:[总经理:[
     副总经理1:[数据中心,测量中心],
     副总经理2:[技术部,办公室],
@@ -22,10 +11,10 @@ function myClickTest(itemId, itemData, itemNode) {
 ]]
 ```
 
-## untree2
+## mindmap2
 
-``` untree width=400 json
-[{
+``` mindmap width=600 height=400 json
+{
     text: "公司董事会",
     children: [{
         text: "总经理",
@@ -43,5 +32,5 @@ function myClickTest(itemId, itemData, itemNode) {
             children: [{text: "技术部"},{text: "评估二部"}],
         }],
     }],
-}]
+}
 ```
