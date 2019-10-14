@@ -4,7 +4,7 @@
         text: "总经理",
         children: [{
             text: "副总经理1",
-            children: [{text: "数据中心"},{text: "测量中心"}],
+            children: [{text: "数据中心", color: 'red'},{text: "测量中心", bgcolor:'blue'}],
         }, {
             text: "副总经理2",
             children: [{text: "财务部"},{text: "办公室"}],
