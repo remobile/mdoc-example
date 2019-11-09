@@ -54,52 +54,9 @@ Union Find
 
 ## tagcloud2
 
-``` tagcloud
+``` tagcloud line
 
-Array
-Backtracking
-Binary Indexed Tree
-Binary Search
-Binary Search Tree
-Binary Tree
-Bit Manipulation
-Bitmap
-Brainteaser
-Breadth-first Search
-Brute Force
-Constructive algorithms
-Depth-first Search
-Description
-Disjoint Set
-Divide and Conquer
-Dynamic Programming
-Enumeration
-Graph
-Greedy
-Hash Table
-HashSet
-Heap
-Implementation
-Kruskal
-Linked List
-List
-Math
-Memoization
-Minimax
-Parser
-Priority Queue
-Queue
-Recursion
-Segment Tree
-Simulation
-Sort
-Stack
-String
-System Design
-Topological Sort
-Tree
-Trie
-Two Pointers
-Union Find
+Array Backtracking Binary\\ Indexed\\ Tree Binary\\ Search Binary\\ Search\\ Tree Binary\\ Tree Bit\\ Manipulation Bitmap Brainteaser Breadth-first\\ Search Brute\\ Force Constructive\\ algorithms Depth-first\\ Search Description Disjoint\\ Set Divide\\ and\\ Conquer Dynamic\\ Programming Enumeration Graph Greedy Hash\\ Table HashSet Heap Implementation Kruskal Linked\\ List List Math Memoization Minimax Parser Priority\\ Queue Queue Recursion Segment\\ Tree Simulation Sort Stack String System\\ Design Topological\\ Sort Tree Trie Two\\ Pointers Union\\ Find
+
 
 ```
