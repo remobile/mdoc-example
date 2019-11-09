@@ -93,6 +93,11 @@ const config = {
                             supports: ['mindmap'], // 思维导图的支持
                         },
                         {
+                            name: 'tagcloud',
+                            path: 'md/tagcloud.md',
+                            supports: ['tagcloud'], // 云标签的支持
+                        },
+                        {
                             name: 'untreejs',
                             path: 'md/untree.js',
                             supports: ['untree'], // 垂直树形控件的js格式的支持
