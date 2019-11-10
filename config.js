@@ -93,6 +93,11 @@ const config = {
                             supports: ['rotateWord'], // 旋转字体的支持
                         },
                         {
+                            name: 'clockRotate',
+                            path: 'md/clockRotate.md',
+                            supports: ['clockRotate'], // 旋转字体的支持
+                        },
+                        {
                             name: 'mindmap',
                             path: 'md/mindmap.md',
                             supports: ['mindmap'], // 思维导图的支持
