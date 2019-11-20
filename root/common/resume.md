@@ -137,7 +137,3 @@ hr { border:0.5px dotted gray !important; }
 编写一个关于jitterbuf内存管理内存池的发明专利。
 编写一个关于物流竞价调控的发明专利。
 :::
-
-::: resume 兴趣爱好
-发掘计算机的最大潜力服务于人类和社会。
-:::
