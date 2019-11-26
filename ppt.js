@@ -21,6 +21,7 @@ const config = {
     transition: 'slide', // none fade slide convex concave
     backgroundImage: 'ppt/background.png',
     disableLayout: true,
+    dist: '1.html', // 编译的目标文件
     pages: [
         {
             name: '第一页',
