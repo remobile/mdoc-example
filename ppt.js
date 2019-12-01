@@ -20,7 +20,7 @@ const config = {
     scripts: [],
     transition: 'slide', // none fade slide convex concave
     backgroundImage: 'ppt/background.png',
-    disableLayout: true,
+    vertical: true, // 垂直方向
     dist: '1.html', // 编译的目标文件
     pages: [
         {
