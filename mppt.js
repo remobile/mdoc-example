@@ -15,7 +15,7 @@ const config = {
         theme: 'solarized-dark',
     },
     markdownPlugins,
-    documentPath: 'ppt', //默认为doc
+    documentPath: 'mppt', //默认为doc
     styles: [],
     scripts: [],
     transition: 'slide', // none fade slide convex concave
