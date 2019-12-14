@@ -20,7 +20,7 @@ const config = {
     scripts: [],
     transition: 'slide', // none fade slide convex concave
     backgroundImage: 'ppt/background.png',
-    vertical: true, // 垂直方向
+    arrowColor: 'red',
     dist: '1.html', // 编译的目标文件
     pages: [
         {
@@ -31,6 +31,7 @@ const config = {
             name: '第二页',
             path: '2.md',
             transition: 'zoom',
+            arrowColor: 'blue',
         },
         {
             name: '第三页',
