@@ -19,8 +19,8 @@ const config = {
     styles: [],
     scripts: [],
     transition: 'slide', // none fade slide convex concave
-    backgroundImage: 'ppt/background.png',
-    arrowColor: 'red',
+    backgroundImage: 'https://cdnoss.zhizuoh5.com/mkfiles/pic/5d9d42c572dec.png',
+    arrowColor: '#FFF',
     dist: '1.html', // 编译的目标文件
     pages: [
         {
