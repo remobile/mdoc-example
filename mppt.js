@@ -4,6 +4,7 @@ module.exports = {
     favicon: 'img/favicon.ico',
     logo: 'img/logo.png',
     documentPath: 'mppt',
+    imagePath: 'mppt',
     transition: 'slide',
     backgroundImage: 'mppt/5d9d42c572dec.png',
     arrowColor: '#FFF',
