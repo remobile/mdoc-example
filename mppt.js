@@ -10,21 +10,21 @@ module.exports = {
     dist: '1.html',
     pages: [
         {
-            name: '第一页',
+            name: '第1页',
             path: '1.md',
         }, {
-            name: '第二页',
+            name: '第2页',
             path: '2.md',
             transition: 'zoom',
             arrowColor: 'blue',
         }, {
-            name: '第三页',
+            name: '第3页',
             path: '3.md',
         }, {
-            name: '第四页',
+            name: '第4页',
             path: '4.md',
         }, {
-            name: '第五页',
+            name: '第5页',
             path: '5.md',
         },
     ],
