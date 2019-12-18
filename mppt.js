@@ -5,7 +5,7 @@ module.exports = {
     logo: 'img/logo.png',
     documentPath: 'mppt',
     transition: 'slide',
-    backgroundImage: 'https://cdnoss.zhizuoh5.com/mkfiles/pic/5d9d42c572dec.png',
+    backgroundImage: 'mppt/5d9d42c572dec.png',
     arrowColor: '#FFF',
     dist: '1.html',
     pages: [
