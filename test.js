@@ -25,16 +25,17 @@ function parseImage(line, list = []) {
     return list;
 }
 function createImage(doc, dir, list, children) {
-    for (const item of list) {
-        const image = Media.addImage(doc, fs.readFileSync(path.join(dir, item.image)), 400, 300);
-        children.push(new Paragraph({ children: [image], alignment: AlignmentType.CENTER }));
-        const text = new TextRun({
-            text: item.text,
-            size: 20,
-            font: { name : 'Songti SC Regular' },
-        });
-        children.push(new Paragraph({ children: [text], alignment: AlignmentType.CENTER }));
-    }
+    const imageList = list.map(o=> Media.addImage(doc, fs.readFileSync(path.join(dir, o.image)), 200, 300));
+    children.push(new Paragraph({
+        children: imageList,
+        alignment: AlignmentType.CENTER
+    }));
+    const textList = list.map(o=> new TextRun({
+        text: o.text,
+        size: 20,
+        font: { name : 'Songti SC Regular' },
+    }));
+    children.push(new Paragraph({ children: textList, alignment: AlignmentType.CENTER }));
 }
 function crateWordLayer(doc, dir, children, level = -1) {
     fs.readdirSync(dir).forEach((file, index) => {
