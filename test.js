@@ -7,14 +7,41 @@ const {
     Packer,
     Paragraph,
     TextRun,
+    AlignmentType,
+    Media,
 }  = require( "./docx");
 
-function crateWordLayer(dir, children, level = -1) {
+function parseImage(line, list = []) {
+    const match = line.match(/\s*!\[([^\]]*)\]\(([^)]*)\)\s*/);
+    if (match) {
+        const text = match[1];
+        const image = match[2];
+        list.push({ text, image });
+        line = line.replace(/\s*!\[([^\]]*)\]\(([^)]*)\)\s*/, '');
+        if (line) {
+            return parseImage(line, list);
+        }
+    }
+    return list;
+}
+function createImage(doc, dir, list, children) {
+    for (const item of list) {
+        const image = Media.addImage(doc, fs.readFileSync(path.join(dir, item.image)), 400, 300);
+        children.push(new Paragraph({ children: [image], alignment: AlignmentType.CENTER }));
+        const text = new TextRun({
+            text: item.text,
+            size: 20,
+            font: { name : 'Songti SC Regular' },
+        });
+        children.push(new Paragraph({ children: [text], alignment: AlignmentType.CENTER }));
+    }
+}
+function crateWordLayer(doc, dir, children, level = -1) {
     fs.readdirSync(dir).forEach((file, index) => {
         const fullname = path.join(dir, file);
         const info = fs.statSync(fullname);
         if(info.isDirectory()) {
-            crateWordLayer(fullname, children, level + 1);
+            crateWordLayer(doc, fullname, children, level + 1);
         } else if (/.*\.md/.test(file)) {
             const text = fs.readFileSync(fullname, 'utf8');
             const list = text.split(/\n/);
@@ -28,6 +55,9 @@ function crateWordLayer(dir, children, level = -1) {
                         text: title,
                         heading: HeadingLevel[`HEADING_${no}`],
                     }));
+                } else if (/^\s*!\[([^\]]*)\]\(([^)]*)\)/.test(line)) {
+                    const list = parseImage(line, []);
+                    createImage(doc, dir, list, children);
                 } else {
                     children.push(new Paragraph({ children: [new TextRun({
                         text: line,
@@ -50,7 +80,7 @@ function main() {
         externalNumbering: numbering,
     });
     const children = [];
-    crateWordLayer('word', children);
+    crateWordLayer(doc, 'word', children);
     doc.addSection({ children });
     Packer.toBuffer(doc).then((buffer) => {
         fs.writeFileSync("test.docx", buffer);
