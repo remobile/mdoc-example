@@ -8,6 +8,10 @@ const {
     Paragraph,
     TextRun,
     AlignmentType,
+    Table,
+    TableCell,
+    TableRow,
+    WidthType,
     Media,
 }  = require( "./docx");
 
@@ -25,17 +29,25 @@ function parseImage(line, list = []) {
     return list;
 }
 function createImage(doc, dir, list, children) {
-    const imageList = list.map(o=> Media.addImage(doc, fs.readFileSync(path.join(dir, o.image)), 200, 300));
-    children.push(new Paragraph({
-        children: imageList,
-        alignment: AlignmentType.CENTER
-    }));
-    const textList = list.map(o=> new TextRun({
-        text: o.text,
-        size: 20,
-        font: { name : 'Songti SC Regular' },
-    }));
-    children.push(new Paragraph({ children: textList, alignment: AlignmentType.CENTER }));
+    let w, h;
+    const fontSize = 20; // 字体大小
+    const tw = 600; // 总宽度
+    if (list.length === 1) {
+        w = tw;
+        h = w * 3 / 5;
+    } else {
+        w = tw / list.length;
+        h = w * 4 / 3;
+    }
+    const width = { size: 100, type: WidthType.PERCENTAGE };
+    const border = { color: "white", size: 1 };
+    const borders = { top: border, bottom: border, left: border, right: border };
+    const text = (str) => new Paragraph({ children: [new TextRun({ text: str, size: fontSize, font: { name: 'Songti SC Regular' } })], alignment: AlignmentType.CENTER });
+    const image = (img, w, h) => new Paragraph({ children: [Media.addImage(doc, fs.readFileSync(path.join(dir, img)), w, h)], alignment: AlignmentType.CENTER });
+    const imageList = list.map(o=> new TableCell({ children: [image(o.image, w, h)], borders }));
+    const textList = list.map(o=> new TableCell({ children: [text(o.text)], borders, margins: { top: 100 } }));
+    const table = new Table({ width, rows: [new TableRow({ children: imageList }), new TableRow({ children: textList })] });
+    children.push(table);
 }
 function crateWordLayer(doc, dir, children, level = -1) {
     fs.readdirSync(dir).forEach((file, index) => {
@@ -62,7 +74,6 @@ function crateWordLayer(doc, dir, children, level = -1) {
                 } else {
                     children.push(new Paragraph({ children: [new TextRun({
                         text: line,
-                        color: 'red',
                         size: 28,
                         font: { name : 'Songti SC Regular' },
                     })], indent: { left: 900, hanging: 360 } }));
