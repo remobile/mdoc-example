@@ -59,7 +59,7 @@ function crateWordLayer(doc, dir, children, level = -1) {
             const text = fs.readFileSync(fullname, 'utf8');
             const list = text.split(/\n/);
             for (const line of list) {
-                if (/^#+\s+/.test(line)) {
+                if (/^#+\s+/.test(line)) { // 标题
                     const li = line.replace(/(^#+)[^#]*/, '$1');
                     const no = li.length + Math.max(level, 0);
                     const title = line.replace(/^#+\s+/, '');
@@ -68,13 +68,23 @@ function crateWordLayer(doc, dir, children, level = -1) {
                         text: title,
                         heading: HeadingLevel[`HEADING_${no}`],
                     }));
-                } else if (/^\s*!\[([^\]]*)\]\(([^)]*)\)/.test(line)) {
+                } else if (/^\s*!\[([^\]]*)\]\(([^)]*)\)/.test(line)) { // 图片
                     const list = parseImage(line, []);
                     createImage(doc, dir, list, children);
+                } else if (/^\*+\s+/.test(line)) { // 列表
+                    const li = line.replace(/(^\*+)[^*]*/, '$1');
+                    const level = li.length;
+                    const title = line.replace(/^\*+\s+/, '');
+                    const head = [ '', '■', '\t◆', '\t\t ●' ][level];
+                    children.push(new Paragraph({ children: [new TextRun({
+                        text: `${head} ${title}`,
+                        size: 24,
+                        font: { name : 'Songti SC Regular' },
+                    })], indent: { left: 900, hanging: 360 } }));
                 } else {
                     children.push(new Paragraph({ children: [new TextRun({
                         text: line,
-                        size: 28,
+                        size: 24,
                         font: { name : 'Songti SC Regular' },
                     })], indent: { left: 900, hanging: 360 } }));
                 }
