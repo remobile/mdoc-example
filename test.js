@@ -124,8 +124,8 @@ function crateWordLayer(doc, dir, children, level = -1) {
     });
 }
 function main() {
-    const styles = fs.readFileSync("./res/styles.xml", "utf-8");
-    const numbering = fs.readFileSync("./res/numbering.xml", "utf-8");
+    const styles = fs.readFileSync("./word/res/styles.xml", "utf-8");
+    const numbering = fs.readFileSync("./word/res/numbering.xml", "utf-8");
     const doc = new Document({
         title: "计划书",
         background: { color: "FFFFFF" },
