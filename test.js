@@ -39,7 +39,7 @@ function createImage(doc, dir, list, children) {
         w = tw / list.length;
         h = w * 4 / 3;
     }
-    const width = { size: 100, type: WidthType.PERCENTAGE };
+    const width = { size: 100, type: WidthType.PERCENTAGE }; // 表格总宽度
     const border = { color: "white", size: 1 };
     const borders = { top: border, bottom: border, left: border, right: border };
     const text = (str) => new Paragraph({ children: [new TextRun({ text: str, size: fontSize, font: { name: 'Songti SC Regular' } })], alignment: AlignmentType.CENTER });
@@ -47,6 +47,18 @@ function createImage(doc, dir, list, children) {
     const imageList = list.map(o=> new TableCell({ children: [image(o.image, w, h)], borders }));
     const textList = list.map(o=> new TableCell({ children: [text(o.text)], borders, margins: { top: 100 } }));
     const table = new Table({ width, rows: [new TableRow({ children: imageList }), new TableRow({ children: textList })] });
+    children.push(table);
+}
+function createExcel(excelTextList, children) {
+    const fontSize = 20; // 字体大小
+    const width = { size: 100, type: WidthType.PERCENTAGE }; // 表格总宽度
+    const list = (line) => line.replace(/^\s*\|/, '').replace(/\|\s*$/, '').split('|').map(o=>o.trim().replace(/<br>/g, '\n'));
+    const text = (str, alignment = AlignmentType.CENTER) => new Paragraph({ children: [new TextRun({ text: str, size: fontSize, font: { name: 'Songti SC Regular' } })], alignment });
+    const row = (line, alignments = []) => list(line).map((o, i)=> new TableCell({ children: [text(o, alignments[i])] }));
+    const header = new TableRow({ children: row(excelTextList[0]) });
+    const alignments = list(excelTextList[1]).map(o=> /^:-+:$/.test(o) ? AlignmentType.CENTER : /-+:$/.test(o) ? AlignmentType.END : AlignmentType.START);
+    const rows = excelTextList.slice(2).map(line=>new TableRow({ children: row(line, alignments) }));
+    const table = new Table({ width, rows: [ header, ...rows ] });
     children.push(table);
 }
 function crateWordLayer(doc, dir, children, level = -1) {
@@ -58,36 +70,55 @@ function crateWordLayer(doc, dir, children, level = -1) {
         } else if (/.*\.md/.test(file)) {
             const text = fs.readFileSync(fullname, 'utf8');
             const list = text.split(/\n/);
+            let isExcel = false;
+            let excelTextList = [];
             for (const line of list) {
-                if (/^#+\s+/.test(line)) { // 标题
-                    const li = line.replace(/(^#+)[^#]*/, '$1');
-                    const no = li.length + Math.max(level, 0);
-                    const title = line.replace(/^#+\s+/, '');
-                    console.log(`HEADING_${no}:${_.repeat('-', no*3)}${title}`);
-                    children.push(new Paragraph({
-                        text: title,
-                        heading: HeadingLevel[`HEADING_${no}`],
-                    }));
-                } else if (/^\s*!\[([^\]]*)\]\(([^)]*)\)/.test(line)) { // 图片
-                    const list = parseImage(line, []);
-                    createImage(doc, dir, list, children);
-                } else if (/^\*+\s+/.test(line)) { // 列表
-                    const li = line.replace(/(^\*+)[^*]*/, '$1');
-                    const level = li.length;
-                    const title = line.replace(/^\*+\s+/, '');
-                    const head = [ '', '■', '\t◆', '\t\t ●' ][level];
-                    children.push(new Paragraph({ children: [new TextRun({
-                        text: `${head} ${title}`,
-                        size: 24,
-                        font: { name : 'Songti SC Regular' },
-                    })], indent: { left: 900, hanging: 360 } }));
+                if (/^\s*\|.*\|\s*$/.test(line)) { // 表格
+                    isExcel = true;
+                    excelTextList.push(line.trim());
                 } else {
-                    children.push(new Paragraph({ children: [new TextRun({
-                        text: line,
-                        size: 24,
-                        font: { name : 'Songti SC Regular' },
-                    })], indent: { left: 900, hanging: 360 } }));
+                    if (/^#+\s+/.test(line)) { // 标题
+                        const li = line.replace(/(^#+)[^#]*/, '$1');
+                        const no = li.length + Math.max(level, 0);
+                        const title = line.replace(/^#+\s+/, '');
+                        console.log(`HEADING_${no}:${_.repeat('-', no*3)}${title}`);
+                        children.push(new Paragraph({
+                            text: title,
+                            heading: HeadingLevel[`HEADING_${no}`],
+                        }));
+                    } else if (/^\s*!\[([^\]]*)\]\(([^)]*)\)/.test(line)) { // 图片
+                        const list = parseImage(line, []);
+                        createImage(doc, dir, list, children);
+                    } else if (/^\*+\s+/.test(line)) { // 列表
+                        const li = line.replace(/(^\*+)[^*]*/, '$1');
+                        const level = li.length;
+                        const title = line.replace(/^\*+\s+/, '');
+                        const head = [ '', '■', '\t◆', '\t\t ●' ][level];
+                        children.push(new Paragraph({ children: [new TextRun({
+                            text: `${head} ${title}`,
+                            size: 24,
+                            font: { name : 'Songti SC Regular' },
+                        })], indent: { left: 900, hanging: 360 } }));
+                    } else {
+                        children.push(new Paragraph({ children: [new TextRun({
+                            text: line,
+                            size: 24,
+                            font: { name : 'Songti SC Regular' },
+                        })], indent: { left: 900, hanging: 360 } }));
+                    }
+                    if (isExcel) {
+                        isExcel = false;
+                        // 生成表格
+                        createExcel(excelTextList, children);
+                        excelTextList = [];
+                    }
                 }
+            }
+            if (isExcel) {
+                isExcel = false;
+                // 生成表格
+                createExcel(excelTextList, children);
+                excelTextList = [];
             }
         }
     });
