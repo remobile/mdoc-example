@@ -13,7 +13,7 @@ const config = {
         tintColor: '#005068',
     },
     highlight: { // 代码的风格 [可空]
-        theme: 'solarized-dark',
+        theme: 'atom-one-dark',
     },
     markdownPlugins,  // 基于 markdown-it 的用户自定义 [可空]
     documentPath: 'root', //默认为doc [可空]
