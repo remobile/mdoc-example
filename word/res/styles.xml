@@ -31,7 +31,7 @@
     <w:lsdException w:name="toc 7" w:uiPriority="39"/>
     <w:lsdException w:name="toc 8" w:uiPriority="39"/>
     <w:lsdException w:name="toc 9" w:uiPriority="39"/>
-    <w:lsdException w:name="caption" w:uiPriority="35" w:qFormat="1"/>
+    <w:lsdException w:name="caption" w:uiPriority="0" w:qFormat="1"/>
     <w:lsdException w:name="Title" w:semiHidden="0" w:uiPriority="10" w:unhideWhenUsed="0" w:qFormat="1"/>
     <w:lsdException w:name="Default Paragraph Font" w:uiPriority="1"/>
     <w:lsdException w:name="Subtitle" w:semiHidden="0" w:uiPriority="11" w:unhideWhenUsed="0" w:qFormat="1"/>
@@ -537,6 +537,57 @@
       <w:rFonts w:ascii="Arial" w:eastAsia="黑体" w:hAnsi="Arial" w:cs="Times New Roman"/>
       <w:kern w:val="2"/>
       <w:sz w:val="21"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:styleId="BalloonText">
+    <w:name w:val="Balloon Text"/>
+    <w:basedOn w:val="Normal"/>
+    <w:link w:val="BalloonTextChar"/>
+    <w:uiPriority w:val="99"/>
+    <w:semiHidden/>
+    <w:unhideWhenUsed/>
+    <w:rsid w:val="00113299"/>
+    <w:rPr>
+      <w:rFonts w:ascii="Heiti SC Light" w:hAnsi="Heiti SC Light"/>
+      <w:sz w:val="18"/>
+      <w:szCs w:val="18"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="character" w:customStyle="1" w:styleId="BalloonTextChar">
+    <w:name w:val="Balloon Text Char"/>
+    <w:basedOn w:val="DefaultParagraphFont"/>
+    <w:link w:val="BalloonText"/>
+    <w:uiPriority w:val="99"/>
+    <w:semiHidden/>
+    <w:rsid w:val="00113299"/>
+    <w:rPr>
+      <w:rFonts w:ascii="Heiti SC Light" w:hAnsi="Heiti SC Light"/>
+      <w:sz w:val="18"/>
+      <w:szCs w:val="18"/>
+    </w:rPr>
+  </w:style>
+  <w:style w:type="paragraph" w:styleId="Caption">
+    <w:name w:val="caption"/>
+    <w:basedOn w:val="Normal"/>
+    <w:next w:val="Normal"/>
+    <w:unhideWhenUsed/>
+    <w:qFormat/>
+    <w:rsid w:val="00EC1555"/>
+    <w:pPr>
+      <w:widowControl w:val="0"/>
+      <w:numPr>
+        <w:numId w:val="2"/>
+      </w:numPr>
+      <w:spacing w:line="360" w:lineRule="auto"/>
+      <w:ind w:left="0" w:firstLine="0"/>
+      <w:jc w:val="center"/>
+    </w:pPr>
+    <w:rPr>
+      <w:rFonts w:ascii="Arial Unicode MS" w:eastAsia="宋体" w:hAnsi="Arial Unicode MS" w:cs="宋体"/>
+      <w:noProof/>
+      <w:kern w:val="2"/>
+      <w:sz w:val="21"/>
+      <w:szCs w:val="20"/>
     </w:rPr>
   </w:style>
 </w:styles>
